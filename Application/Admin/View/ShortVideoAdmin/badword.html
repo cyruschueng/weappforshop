@@ -1,0 +1,127 @@
+<extend name="Layout/master" />
+<block name="title">屏蔽词管理-</block>
+<block name="head">
+    <style>.ibox .open > .dropdown-menu{ left: 0!important;} .ml6{ margin-left: 6px;}</style>
+</block>
+<block name="content">
+    <!--//宜-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>屏蔽词管理：</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-3 m-b-xs">
+                            <div class="input-group" >
+                                <textarea data-role="content" placeholder="如果添加多个屏蔽词，每行一个" style="width: 735px; height: 196px;" class="input-sm form-control" type="text"></textarea>
+                                <span class="input-group-btn col-sm-3 m-b-xs" style="margin-left: 0; padding-left: 0; margin-top: 10px">
+                                        <button type="button" data-role="badword" class="btn btn-sm" style="background: #e00214;color: #fff;"> 新增屏蔽词</button>
+                                <a type="button" data-role="badword" class="btn btn-sm btn-default" style="margin-left: 10px;" href="{:U('/short_video_admin/badword',['show'=>'yes'])}">点击查看</a> </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <input type="text" name="kw"  class="input-sm form-control" style="width: 200px;" value="{$kw}" /> <button type="button" data-role="search" class="btn btn-sm"> 搜索</button>
+                    </div>
+                    <div class="row">
+
+                    <volist id="badword" name="badword_list">
+                        <div class="btn-group ml6">
+                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">{$badword.badword} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:" data-id="{$badword.id}" data-role="delword">删除</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </volist>
+                    </div>
+                    <div class="row">
+                        <div class="pages">
+                            {$page}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--//宜-->
+</block>
+<block name="js">
+    <!-- iCheck -->
+    <script src="__PUBLIC__/js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- layerDate plugin javascript -->
+    <!--<script src="__PUBLIC__/js/plugins/layer/laydate/laydate.js"></script>-->
+    <!--<script src="__PUBLIC__/js/plugins/layer/layer.js"></script>-->
+    <script type="text/javascript">
+        $('button[data-role="search"]').click(function(){
+            var kw = $('input[name="kw"]').val();
+            window.location.href = "/index.php?s=/short_video_admin/badword&show=yes&kw="+kw;
+        });
+        $('button[data-role="badword"]').click(function () {
+            var content = $.trim($('textarea[data-role="content"]').val());
+            if (content == '') {
+                parent.layer.msg("请输入屏蔽词信息~");
+                return false;
+            }
+            var loading = layer.load();
+
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                data: {content: content},
+                url: "{:U('/short_video_admin/dobadword')}",
+                success: function (data) {
+                    layer.close(loading);
+                    if (data.state == 200) {
+                        parent.layer.msg("添加成功~");
+                        window.location.reload();
+                    } else {
+                        parent.layer.msg(data.msg);
+                    }
+                },
+                error: function () {
+                    layer.close(loading);
+                    // alert('删除失败，稍后再试');
+                }
+            });
+        });
+
+        $('a[data-role="delword"]').click(function(){
+            if (!confirm("确定要删除吗？")) {
+                return false;
+            }
+            var id = $(this).attr('data-id');
+            var loading = layer.load();
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                data: {id: id},
+                url: "{:U('/short_video_admin/delbadword')}",
+                success: function (data) {
+                    layer.close(loading);
+                    if (data.state == 200) {
+                        parent.layer.msg("删除成功~");
+                        window.location.reload();
+                    } else {
+                        parent.layer.msg(data.msg);
+                    }
+                },
+                error: function () {
+                    layer.close(loading);
+                    // alert('删除失败，稍后再试');
+                }
+            });
+
+        });
+
+    </script>
+
+
+</block>

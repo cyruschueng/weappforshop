@@ -1,0 +1,162 @@
+<extend name="Layout/master"/>
+<block name="title">帐号编辑-</block>
+<block name="head">
+</block>
+<block name="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class=""><a href="{:U('/short_video_admin/index')}" target="_self" class="btn" style="background: #e00214;color: #fff;">返回</a>
+                </div>
+                <div class="ibox-title">
+                    <h5><a href="{:U('/short_video_admin/index')}" style="color: #e00214;"> 账号管理</a> >
+                        <small>账号编辑</small>
+                    </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="form1" name="edit" target="_self" action="{:U('/short_video_admin/edit')}"
+                          class="form-horizontal">
+                        <input type="hidden" name="id" value="{$short_video_admin.id}"/>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">登陆用户 <span style="color:#e91e63 ">*</span>：</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="uname"  maxlength="26" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')"
+                                       onpaste="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')"
+                                       oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')"
+                                       value="{$short_video_admin.uname}" class="form-control relate-handle"
+                                       required="" aria-required="true" placeholder="输入英文或者数字 不小于6个字符">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">用户昵称 <span style="color:#e91e63 ">*</span>：</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="nickname"  maxlength="26"
+                                       value="{$short_video_admin.nickname}" class="form-control relate-handle"
+                                       required="" aria-required="true" placeholder="用户昵称">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">手机号 <span style="color:#e91e63 ">*</span>：</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="mobile"
+                                       value="{$short_video_admin.mobile}" class="form-control relate-handle"
+                                       required="" aria-required="true" maxlength="11" placeholder="输入正确手机号">
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">头像： <span style="color:#e91e63 ">*</span>：</label>
+
+                            <div class="col-sm-6">
+                                <img class="pic_view_detail" src="<if condition=" $short_video_admin['pic']">{$short_video_admin['pic']}<else/>/Public/images/header.jpg</if>" style="max-width: 320px; max-height: 320px;" />
+                                <div style="margin: 4px; color:red">*推荐尺寸为：320*320</div>
+                                <input type="hidden" id="pic" data-url="{$short_video_admin.pic}" name="pic" value="{$short_video_admin.pic}" class="view_img form-control" required="" aria-required="true" placeholder="请上传Banner图片" />
+                                <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'short_video_banner','fileback'=>'pic'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">密码 <span style="color:#e91e63 ">*</span>：</label>
+
+                            <div class="col-sm-6">
+                                <input type="password" name="pwd"  maxlength="26" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9._]/g,'')"
+                                       onpaste="value=value.replace(/[^\a-\z\A-\Z0-9._]/g,'')"
+                                       oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9._]/g,'')" value=""
+                                       class="form-control  relate-handle"
+                                       required="" aria-required="true" placeholder="输入英文或者数字或.或_ 不小于6个字符">
+                            </div>
+                        </div>
+                        <if condition="!$short_video_admin">
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">角色<span style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-6">
+                                <label class="checkbox-inline i-checks">
+                                    <input type="radio" name="role" <if condition=" 4 eq $short_video_admin[role]">checked</if> value="4">OGC帐号</label>
+                                <label class="checkbox-inline i-checks">
+                                    <input type="radio" name="role" <if condition=" 1 eq $short_video_admin[role]">checked</if> value="1">系统管理员</label>
+                            </div>
+                        </div>
+                            </if>
+
+                        <if condition="!$short_video_admin OR $short_video_admin['role'] eq 4">
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group data-tv">
+                            <label class="col-sm-3 control-label">所属节目<span style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-6">
+                                <volist name="tv_list" id="tv">
+                                <label class="checkbox-inline i-checks">
+                                    <input type="radio" name="tv_id" <if condition=" $tv[id] eq $short_video_admin[tv_id]">checked</if> value="{$tv.id}">{$tv.tv_name}</label>
+                                </volist>
+                                <label>* 仅系OGC账户才需要设置</label>
+                            </div>
+                        </div>
+                        </if>
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button type="button" class="btn" onclick="checktosubmit('{$short_video_admin.id}')" style="background: #e00214;color: #fff;">保存内容</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <!-- iCheck -->
+    <script src="__PUBLIC__/js/plugins/iCheck/icheck.min.js"></script>
+
+
+    <!-- layerDate plugin javascript -->
+    <!--<script src="__PUBLIC__/js/plugins/layer/laydate/laydate.js"></script>-->
+    <!--<script src="__PUBLIC__/js/plugins/layer/layer.js"></script>-->
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+        function checktosubmit(id) {
+
+            var isSuccess = 1;
+            if (id == '') {
+                if ($("input[name='uname']").val().length < 6) {
+                    layer.msg('帐号名称长度不能够小于6个字符' || "提示信息！");
+
+                    isSuccess = 0;
+                    return;
+                }
+            }
+
+            if (id == '') {
+                if ($("input[name='pwd']").val().length < 6) {
+                    layer.msg('密码长度不能够小于6' || "提示信息！");
+
+                    isSuccess = 0;
+                    return;
+                }
+            }
+
+            if (isSuccess == 1) {
+                form1.submit();
+            }
+        }
+    </script>
+
+
+</block>

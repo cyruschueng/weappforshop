@@ -1,0 +1,587 @@
+[ 2017-09-24T00:00:42+08:00 ] 47.93.127.198 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+
+[ 2017-09-24T08:17:21+08:00 ] 106.11.227.40 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-09-24T08:38:35+08:00 ] 139.162.116.133 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-09-24T09:58:00+08:00 ] 118.250.73.59 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: INSERT INTO `weapp_statics` (`day`,`shopid`,`pv`,`uv`,`uvex`,`pvex`) VALUES ('1506182400','29','1','1','1','1') [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-24T09:58:01+08:00 ] 118.250.73.59 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0695s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T09:58:01+08:00 ] 118.250.73.59 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0689s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0007s ]
+
+[ 2017-09-24T09:58:01+08:00 ] 118.250.73.59 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0007s ]
+
+[ 2017-09-24T09:58:01+08:00 ] 118.250.73.59 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=011535ov1Jzv5d0ecKpv1EA7ov1535oq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0024s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('/ThnCbowZ3HSP/xL3cSo+A==','oDIAe0clhqZy2KPaBZYRwPSEhfVw','1507082281','011535ov1Jzv5d0ecKpv1EA7ov1535oq') [ RunTime:0.0221s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0clhqZy2KPaBZYRwPSEhfVw' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-24T10:48:40+08:00 ] 220.202.152.41 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-24T10:48:40+08:00 ] 220.202.152.41 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC LIMIT 7   [ RunTime:0.0009s ]
+
+[ 2017-09-24T10:48:40+08:00 ] 220.202.152.41 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0007s ]
+
+[ 2017-09-24T10:48:40+08:00 ] 220.202.152.41 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-09-24T10:48:40+08:00 ] 220.202.152.41 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=021C8Wg40kNNcE1gjHg40yNYg40C8Wg1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0025s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('rEOQ0pXMUDyJUePrYPv8oA==','oDIAe0ZMYygYQj42hYeqTckiYjzM','1507085320','021C8Wg40kNNcE1gjHg40yNYg40C8Wg1') [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0ZMYygYQj42hYeqTckiYjzM' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-24T10:48:44+08:00 ] 220.202.152.41 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `category_id` = 23 AND `uid` = 29  [ RunTime:0.0003s ]
+
+[ 2017-09-24T11:10:27+08:00 ] 140.205.201.35 /showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+ERR: 无法加载控制器:Showcase
+
+[ 2017-09-24T11:10:27+08:00 ] 140.205.201.35 /struts2-showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+ERR: 无法加载控制器:Struts2-showcase
+
+[ 2017-09-24T11:10:27+08:00 ] 140.205.201.35 /integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+ERR: 无法加载控制器:Integration
+
+[ 2017-09-24T17:00:38+08:00 ] 140.205.201.33 /showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+ERR: 无法加载控制器:Showcase
+
+[ 2017-09-24T17:00:38+08:00 ] 140.205.201.33 /struts2-showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+ERR: 无法加载控制器:Struts2-showcase
+
+[ 2017-09-24T17:00:38+08:00 ] 140.205.201.33 /integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+ERR: 无法加载控制器:Integration
+
+[ 2017-09-24T17:23:16+08:00 ] 184.105.139.67 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+
+[ 2017-09-24T18:14:37+08:00 ] 183.214.111.223 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0845s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T18:14:37+08:00 ] 183.214.111.223 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0741s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-24T18:14:37+08:00 ] 183.214.111.223 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=013lwCaQ0nSjW72CXLcQ0KiJaQ0lwCaV
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0867s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0025s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('QLppS7omWLpabgyyad7f9Q==','oDIAe0SevYtZgIoivaeflbOJlZzc','1507112077','013lwCaQ0nSjW72CXLcQ0KiJaQ0lwCaV') [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0SevYtZgIoivaeflbOJlZzc' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-24T18:14:38+08:00 ] 183.214.111.223 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T18:14:41+08:00 ] 183.214.111.223 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-09-24T20:28:17+08:00 ] 67.21.36.2 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+
+[ 2017-09-24T22:01:49+08:00 ] 159.203.244.190 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+
+[ 2017-09-24T22:40:24+08:00 ] 111.22.8.150 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-24T22:40:24+08:00 ] 111.22.8.150 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T22:40:24+08:00 ] 111.22.8.150 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001508s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0139s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC LIMIT 7   [ RunTime:0.0013s ]
+
+[ 2017-09-24T22:40:25+08:00 ] 111.22.8.150 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-09-24T22:40:25+08:00 ] 111.22.8.150 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=003ZBcLO17iIw41uldNO1mPcLO1ZBcL0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0027s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('ml7W/Nli6UMBqkUtdTIW6w==','oDIAe0Vv7jIe79CsAJaXgy60hCKA','1507128025','003ZBcLO17iIw41uldNO1mPcLO1ZBcL0') [ RunTime:0.0132s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Vv7jIe79CsAJaXgy60hCKA' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-24T22:40:27+08:00 ] 111.22.8.150 //user/wxapp_registercomplex?mallname=wxcba01efc22c3fcc6&openid=oDIAe0Vv7jIe79CsAJaXgy60hCKA&code=%7B%22errMsg%22%3A%22getUserInfo%3Aok%22%2C%22rawData%22%3A%22%7B%5C%22nickName%5C%22%3A%5C%22%E8%82%96%5C%22%2C%5C%22gender%5C%22%3A1%2C%5C%22language%5C%22%3A%5C%22zh_CN%5C%22%2C%5C%22city%5C%22%3A%5C%22Changsha%5C%22%2C%5C%22province%5C%22%3A%5C%22Hunan%5C%22%2C%5C%22country%5C%22%3A%5C%22China%5C%22%2C%5C%22avatarUrl%5C%22%3A%5C%22https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FiaRzhZm9Whn96tGfckye9icdkicprPuH6IfLdWG9FSaGL0W5I3ZiarLSo9uXQTiaQzfeibImApWAl8xbciaIPyic3craCg%2F0%5C%22%7D%22%2C%22userInfo%22%3A%7B%22nickName%22%3A%22%E8%82%96%22%2C%22gender%22%3A1%2C%22language%22%3A%22zh_CN%22%2C%22city%22%3A%22Changsha%22%2C%22province%22%3A%22Hunan%22%2C%22country%22%3A%22China%22%2C%22avatarUrl%22%3A%22https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FiaRzhZm9Whn96tGfckye9icdkicprPuH6IfLdWG9FSaGL0W5I3ZiarLSo9uXQTiaQzfeibImApWAl8xbciaIPyic3craCg%2F0%22%7D%2C%22signature%22%3A%222056660136ba17952aa1dcea4e182353651db935%22%2C%22encryptedData%22%3A%22zxJYbz49g0R8kw8Waz%2BcAykmbGzpIivzC8LsWckOJSevIkRg7QRO9rmV9601rpsKXVa1Etn%2BA5TGLKufGq3PhuaTrUrdC72WHPTseBhWuLq0yiAUvOjUrZPMjhYwnsqSExLkRiR6PLGajHZb8pQFAYy0ewykydFyrTwErAFEO4KgrMyULT38aMn%2Fe5TmKNfAEO4zWhHlX2WHayBvh562iH9n1YbjI06sMTJbbylJyAm5V8iETV4y1cmHp%2F1ctRNExAi6scPvRBhyuPbM6wXwsi17HqtoCrD0nPJBREp1NmvSk61ENy0ysKYN%2BB6d3V0PELKGv5QfZC8nlm%2BsonbmeAxTJ5piDGpLO1X5ayTsDh55TsBkxnvHTqL9vy29FJVRpXxS1BY%2FQIwo2UwWMj9EYP%2FcH3npUgqaqhlD8GNoEkZDSRxAIZiGhvErllsz1Svy8fdEvTSB4nCa8vK0Uz38l7li69DlboqH7L5Z%2FjX7We4%3D%22%2C%22iv%22%3A%22k04vEcVRzzjnPnly7ITzkg%3D%3D%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: signature /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 145 行.
+NOTIC: [8] Undefined index: encryptedData /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 146 行.
+NOTIC: [8] Undefined index: iv /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 147 行.
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Vv7jIe79CsAJaXgy60hCKA' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0013s ]
+SQL: INSERT INTO `weapp_shop_wxappuser` (`nickName`,`gender`,`language`,`city`,`province`,`country`,`avatarUrl`,`signature`,`encryptedData`,`iv`,`token`,`token_time`,`shopid`,`create_time`,`openid`) VALUES ('肖','1','zh_CN','Changsha','Hunan','China','https://wx.qlogo.cn/mmopen/vi_32/iaRzhZm9Whn96tGfckye9icdkicprPuH6IfLdWG9FSaGL0W5I3ZiarLSo9uXQTiaQzfeibImApWAl8xbciaIPyic3craCg/0',NULL,NULL,NULL,'e184cff839ba96a4bfe738fb07f837a3','1508856027','29','1506264027','oDIAe0Vv7jIe79CsAJaXgy60hCKA') [ RunTime:0.0021s ]
+
+[ 2017-09-24T22:40:28+08:00 ] 111.22.8.150 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=013u8rhJ0o9mej2wLAiJ0ihhhJ0u8rh-
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0019s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('ml7W/Nli6UMBqkUtdTIW6w==','oDIAe0Vv7jIe79CsAJaXgy60hCKA','1507128028','013u8rhJ0o9mej2wLAiJ0ihhhJ0u8rh-') [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Vv7jIe79CsAJaXgy60hCKA' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-09-24T22:40:32+08:00 ] 111.22.8.150 //shop/goods_detail?mallname=wxcba01efc22c3fcc6&id=49
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29 AND `id` = 49 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 32 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 33 行.
+
+[ 2017-09-24T22:40:44+08:00 ] 111.22.8.150 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T22:40:44+08:00 ] 111.22.8.150 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001745s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC LIMIT 7   [ RunTime:0.0002s ]
+
+[ 2017-09-24T22:40:44+08:00 ] 111.22.8.150 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506182400 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506182400 AND `shopid` = 29 [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-09-24T23:45:27+08:00 ] 183.240.198.23 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-09-24T23:45:35+08:00 ] 183.240.198.23 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+

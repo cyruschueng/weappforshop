@@ -1,0 +1,21 @@
+[ 2017-09-22T18:32:33+08:00 ] 183.240.202.36 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1506009600 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1506009600 AND `shopid` = 29 [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 93 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 93 行.
+

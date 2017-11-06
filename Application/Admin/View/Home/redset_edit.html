@@ -1,0 +1,59 @@
+<extend name="Layout/master" />
+<block name="title">红包文案编辑-</block>
+<block name="head">
+</block>
+<block name="content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+          <div class=""> <a href="{:U('/home/redset')}" target="_self" class="btn btn-primary ">返回</a> </div>
+        <div class="ibox-title">
+          <h5><a href="{:U('/home/index')}"> 首页管理</a> > <small>红包文案编辑</small></h5>
+          <div class="ibox-tools">
+              <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+   </div>
+        </div>
+        <div class="ibox-content">
+          <form method="post" name="edit" target="_self" action="" class="form-horizontal">
+              <input type="hidden" name="id" value="{$config.id}" />
+              <input type="hidden" name="category" value="red" />
+              <input type="hidden" name="config_name" value="red_title" />
+              
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">公众号配置：</label>
+                  <div class="col-sm-10">
+                      <select name="utype" class="form-control">
+                      <volist name="public_city" id="item" key="city_id">
+                      <option value="{$key}" <if condition="$config.utype eq $key">selected</if> >{$item}</option>
+                      </volist>
+                  </select>
+                  <span class="help-block m-b-none" style="color: #777">*</span>
+                  </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">图片LOGO：</label>
+                  <div class="col-sm-10">
+                      <input type="text" id="pic" data-url="{$config.pic}" name="pic" value="{$config.pic}" class="form-control view_img">
+                      <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'redconfig','fileback'=>'pic'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span> </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                            <label class="col-sm-2 control-label">配置内容：</label>
+                            <div class="col-sm-10">
+                                <textarea rows="4" class="form-control" name="content">{$config.content}</textarea>
+                                <span class="help-block m-b-none" style="color: #777"></span></span> 
+							</div>
+                        </div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-primary" type="submit">保存内容</button>
+                <button class="btn btn-white" type="reset">取消</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>

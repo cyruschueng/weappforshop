@@ -1,0 +1,136 @@
+<extend name="Layout/master" />
+<block name="title">视频管理-</block>
+<block name="head">
+</block>
+<block name="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>我要上电视</h5>
+
+                    <div class="ibox-content">
+                        <div class=""> <a href="{$jump_ipm_url}" target="_self" class="btn" style="background: #e00214;color: #fff;">发起新一期征集活动</a>
+                            <div class="input-group  col-sm-6 pull-right form-group" id='pickfiles'>
+                                <div class="col-sm-3 padding-item">
+                             <select class="form-control " name="tv_id">
+                                  <option value="0">所有节目</option>
+                                  <volist id="tv" name="tv_list">
+                                  <option value="{$tv.id}" <if condition="$tv_id eq $tv['id']">selected</if>>{$tv.tv_name}</option>
+                                  </volist>
+                             </select>
+                                    </div>
+
+                                <div class="col-sm-3 padding-item">
+                                    <select class="form-control " name="status">
+                                        <option value="0">所有状态</option>
+                                        <option value="1" <if condition="$status eq 1">selected</if>>已上架</option>
+                                        <option value="4" <if condition="$status eq 4">selected</if>>已下架</option>
+                                        <option value="9" <if condition="$status eq 9">selected</if>>待转码</option>
+                                        <option value="5" <if condition="$status eq 5">selected</if>>转码失败</option>
+                                        <option value="2" <if condition="$status eq 2">selected</if>>审核驳回</option>
+                                        <option value="7" <if condition="$status eq 7">selected</if>>举报下架</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-5 padding-item">
+                                <input class="form-control" name="kw" value="{$kw}"  placeholder="视频标题" type="text" />
+                            </div>
+
+                            <div class="input-group-btn">
+                              <button type="submit" data-role="search" class="btn btn-sm" style="background: #e00214;color: #fff;">
+                                搜索
+                              </button>
+                            </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-bordered table-hover " id="editable">
+                            <thead>
+                                <tr>
+                                    <th>视频ID</th>
+                                    <th>视频信息</th>
+                                    <th>电视台</th>
+                                    <th>视频时长</th>
+                                    <th>视频大小</th>
+                                    <th>是否下载</th>
+                                    <th>是否征用</th>
+                                    <th>状态</th>
+                                    <th>封面</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="list" id="item">
+                                    <tr class="gradeX" url="{$item.url}">
+                                        <td>{$item.id}</td>
+                                        <td align="left" title="{$item.title}">
+                                            <div style="float: left; clear: both; margin: 6px 0; line-height: 22px;"><b>{$item.title|mb_substr=0,30}</b> <span style="padding-left: 12px;"><i class="fa fa-user"></i> {$item.username|default='未知'}</span></div>
+                                            <div style="float: left; clear: both; margin: 6px 0; line-height: 22px; font-size: 12px"><span style="background: red; padding: 4px; color: #fff; border-radius: 10px; font-size: 11px;">我要上电视</span> <span style="padding: 4px; color: #999">{:getActiveName($item['active_id'])['active_name']}</span> <span style="color: #999">{:date("Y-m-d H:i",$item['create_time'])}</span></div>
+                                        </td>
+                                        <td>{:getTvName($item[tv_id])['tv_name']}</td>
+                                        <td>{:tans_human_minutes($item[duration])}</td>
+                                        <td>{$item.size_text}</td>
+                                        <td>
+                                            <if condition="$item.is_down eq 1"><font color="green" >已下载</font><else/><font color="#a9a9a9" >未下载</font></if>
+                                            <if condition="$item.is_hot eq 1"><font color="red" >[推荐]</font></if>
+                                        </td>
+                                        <td><if condition="$item['is_used'] eq 1"><font color="green">已征用</font><else/><font color="#a9a9a9" >未征用</font></if></td>
+                                        <td>{:get_video_status($item[status])}</td>
+                                        <td align="center">
+                                            <if condition="$item.pic"><div><img src="{$item.pic}" class="view_img" data-url="{$item.pic}" style="max-width: 100px; max-height: 80px" /></div></if>
+                                            <if condition="$item.ourl"><div><a href="{:U('/short_video/downvideo',array('id'=>$item[id]))}" style="padding: 8px; color: #666; font-size: 12px;">点击下载</a></div></if>
+                                        </td>
+                                        <td class="center" style="white-space: nowrap;">
+                                            <if condition="0 eq $item[status]">
+                                                转码中...
+                                            <elseif condition="-1 eq $item[status]" />
+                                                <a href="{:U('/short_video/edit', array('id'=>$item['id']))}"> 重传视频</a>
+                                            <else/>
+                                                <if condition="1 eq $item['status']">
+                                                    <a href="{:U('/short_video/drop', array('id'=>$item['id'],'status'=>4))}" onclick="return confirm('确定要下架该视频吗？')">下架</a>
+                                                <elseif condition="4 eq $item['status']"/>
+                                                    <a href="{:U('/short_video/drop', array('id'=>$item['id'],'status'=>1))}" onclick="return confirm('确定要上架该视频吗？')"> 上架</a>
+                                                </if>
+                                                <if condition="$item['is_used'] eq 0"><a href="{:U('/short_video/usevideo', array('id'=>$item['id']))}" onclick="return confirm('确定要征用该视频吗？')">征用该视频</a></if>
+                                                <a href="{:U('/short_video/del', array('id'=>$item['id']))}" onclick="return confirm('确定要删除该视频吗？')"> 删除</a>
+                                                <a href="{:U('/short_video_comment/index', array('id'=>$item['id']))}"> 管理评论</a>
+                                            </if>
+                                        </td>
+                                    </tr>
+                                </volist>
+                            </tbody>
+                        </table>
+                        <div class="row ">
+                            <div class="pages">
+                                {$page}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</block>
+<block name="js">
+
+
+    <script type="text/javascript">
+        $('button[data-role="search"]').click(function() {
+            window.location.href = "{:U('/short_video/tvlist')}&tv_id=" + $('select[name="tv_id"]').val()+"&kw="+$('input[name="kw"]').val()+"&status=" + $('select[name="status"]').val();
+        });
+
+        $("#delete-short_video").click(function() {
+            if (!confirm("确定要删除吗？")) {
+                return false;
+            }
+            var idList = [];
+            $("input[name='delete-id[]']:checked").each(function() {
+
+                // qcVideo.uploader.deleteFile($(this).parent().parent().attr('url'));
+
+                idList.push($(this).val());
+            });
+            window.location.href = "/index.php?s=/short_video/delete/list/" + idList.toString() + ".html";
+        });
+    </script>
+</block>

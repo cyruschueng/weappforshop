@@ -1,0 +1,236 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>短秀后台管理系统</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/Public/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="/Public/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/Public/css/animate.css" rel="stylesheet">
+    <link href="/Public/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/Public/css/style.css?v=4.0.0" rel="stylesheet">
+    <base target="_self">
+    <style type="text/css">
+        .stat_block{font-size: 24px;padding-bottom: 20px;}
+        .stat_block .stat_ico{line-height:140px; float:left; margin-left:30px; font-size:60px; color:#0099ff}
+        .stat_block .stat_total{float:left; clear:both; margin-top:25px; color: #cc0000; font-size: 40px}
+        .stat_block .stat_label{float: left; clear: both; font-weight: normal !important; font-size: 16px; color: #999}
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="row border-bottom dashboard-header">
+        <div class="col-sm-12" style="margin-bottom: 20px;">
+                <div class="ibox-content">
+            <div class="form-group">
+                <div class="col-sm-9" style="margin-bottom: 8px">
+                        <label class="control-label" style="float:left;">日期选择：</label>
+                        <div class="col-sm-3">
+                            <input placeholder="开始日期" class="form-control layer-date" autocomplete="off" name="from_date" value="<?php echo ($from_date); ?>" id="start" style="margin-top: -8px; max-width: 105px;" />
+                            <input placeholder="结束日期" class="form-control layer-date" autocomplete="off" name="to_date" value="<?php echo ($to_date); ?>" id="end" style="margin-top: -8px; max-width: 105px;" />
+                        </div>
+                        *当日数据仅供参考，请以隔天数据为准，此次数据更新至今日<?php echo ($update_date); ?>
+                </div>
+            </div>
+                    </div>
+        </div>
+
+
+            <div class="col-sm-12 m-b-m stat_block" >
+                <?php if($role < 2): ?><div class="col-sm-4 p-m  white-bg ">
+                    <i class="fa fa-user-plus stat_ico"></i>
+                    <span style="float:left; margin-left: 20px;">
+                        <span class="stat_total"><strong><?php echo ($total_user); ?></strong></span>
+                        <span class="stat_label">注册用户数</span>
+                    </span>
+                </div><?php endif; ?>
+                <div class="col-sm-4 p-m  white-bg ">
+                    <i class="fa fa-play-circle-o stat_ico" style=" color:#33cc00"></i>
+                    <span style="float:left; margin-left: 20px;">
+                        <span class="stat_total"><strong><?php echo ($total_play); ?></strong></span>
+                        <span class="stat_label">播放量</span>
+                    </span>
+                </div>
+                <div class="col-sm-4 p-m  white-bg ">
+                    <i class="fa fa-file-video-o stat_ico" style="color:#ff6600"></i>
+                    <span style="float:left; margin-left: 20px;">
+                        <span class="stat_total"><strong><?php echo ($total_video); ?></strong></span>
+                        <span class="stat_label">视频总数</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="col-sm-13">
+                <?php if($role < 2): ?><div class="col-sm-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>用户总量概览</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div id="echarts-bar-chart" style="width:100%;height:300px;" ></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>播放量概览</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div id="echarts-bar-chart2" style="width:100%;height:300px;" ></div>
+                              </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>视频总数概览</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div id="echarts-bar-chart3" style="width:100%;height:300px;" ></div>
+                                 </div>
+                    </div>
+                </div><?php endif; ?>
+                <!--
+                <div id="containerchart" style="min-width:400px;height:600px;padding: 80px; display: none"></div>-->
+            </div>
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="/Public/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/Public/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="/Public/js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="/Public/js/content.js"></script>
+    <!-- 欢迎信息 -->
+    <script src="/Public/js/welcome.js"></script>
+    <script src="/Public/js/plugins/highstock/highstock.js"></script>
+    <script src="/Public/js/plugins/highstock/no-data-to-display.js"></script>
+    <script src="/Public/js/plugins/highstock/exporting.js"></script>
+    <script src="/Public/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/Public/js/plugins/echarts/echarts-all.js"></script>
+    <script src="/Public/js/plugins/layer/laydate/laydate.js"></script>
+    <script type="text/javascript">
+        //日期范围限制
+        var start = {
+            elem: '#start',
+            format: 'YYYY-MM-DD',
+            min: "2017-05-01", //设定最小日期为当前日期
+            max: '<?php echo ($update_date); ?>', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas; //将结束日的初始值设定为开始日
+                init_load(); // 回调数据
+            }
+        };
+        var end = {
+            elem: '#end',
+            format: 'YYYY-MM-DD',
+            min: "2017-05-01",
+            max: '<?php echo ($update_date); ?>',
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+                init_load();  // 回调数据
+            }
+        };
+        laydate(start);
+        laydate(end);
+
+        function init_data(title, data_date,data_total,data_new){
+            var baroption = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: title
+                },
+                grid: {
+                    x: 50,
+                    x2: 40,
+                    y2: 24
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: data_date
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: title[0],
+                        type: 'bar',
+                        data: data_total,
+                    },
+                    {
+                        name: title[1],
+                        type: 'bar',
+                        data: data_new,
+                    }
+                ]
+            };
+
+            return baroption;
+        }
+
+        function init_load(){
+            var from_date = $('input[name="from_date"]').val();
+            var to_date = $('input[name="to_date"]').val();
+        <?php if($role < 2): ?>$.getJSON('/index.php?s=/index/ajax_index_data.html&from_date='+from_date+'&to_date='+to_date, function(data) {
+                var barChart = echarts.init(document.getElementById("echarts-bar-chart"));
+                barChart.setOption(init_data(['用户总数','新增用户'],data.total_date,data.total_user_all, data.total_user_new));
+
+                var barChart2 = echarts.init(document.getElementById("echarts-bar-chart2"));
+                barChart2.setOption(init_data(['播放总量','新增播放'],data.total_date,data.total_play_all, data.total_play_new));
+
+                var barChart3 = echarts.init(document.getElementById("echarts-bar-chart3"));
+                barChart3.setOption(init_data(['视频总数','新增视频'],data.total_date,data.total_video_all, data.total_video_new));
+                $(window).resize(function(){
+                    barChart.resize();
+                    barChart2.resize();
+                    barChart3.resize();
+                });
+
+            });<?php endif; ?>
+        }
+
+        init_load();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            $('.i-checks').on('ifChecked', function(event){ //ifCreated 事件应该在插件初始化之前绑定
+                window.location.href = "/index.php?s=/index/index1&class="+$('input[name="platform"]:checked').val();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

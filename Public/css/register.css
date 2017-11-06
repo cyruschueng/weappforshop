@@ -1,0 +1,91 @@
+.register{
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    background: #0F1217;
+    opacity:0.8;
+    position: absolute;
+    z-index:100;
+    left:390px;
+    top:100px;
+    color: #fff;
+    display: none;
+    padding:10px 0;
+}
+.register .content{
+    padding:20px;
+}
+.register .content .chooseContent{
+    font-size: 12px;
+}
+.register .content .chooseContent span{
+    width: 104px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 15px;
+}
+#createCompany{
+    display: none;
+}
+.register .content .info{
+    margin-top: 20px;
+    padding:0 5px;
+    font-size: 12px;
+}
+.info .item{
+    margin-bottom: 20px;
+}
+.info .item .verification{
+    border: 1px solid #fff;
+    padding:2px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.info .item input{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: #0F1217;
+    width:200px;
+    outline: none;
+}
+.info .item>span{
+    width:100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 15px;
+}
+.info .protocol{
+    text-align: center;
+    margin-top: 35px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.info .protocol label{
+    position: relative;
+}
+.info .protocol #protocol{
+    position: absolute;
+    left: -25px;
+    top: -3px;
+}
+.info .protocol #protocol1{
+    position: absolute;
+    left: -25px;
+    top: -3px;
+}
+.box{
+    text-align: center;
+    margin-top: 10px;
+}
+.box .check{
+    width: 70%;
+    display: inline-block;
+    background: #A62C05;
+    padding: 6px 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    cursor: pointer;
+}

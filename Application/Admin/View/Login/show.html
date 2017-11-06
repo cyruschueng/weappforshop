@@ -1,0 +1,43 @@
+<link rel="shortcut icon" href="favicon.ico">
+<link href="__PUBLIC__/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+<link href="__PUBLIC__/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+<!-- Data Tables -->
+<link href="__PUBLIC__/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+<link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+<link href="__PUBLIC__/css/style.css?v=4.0.0" rel="stylesheet">
+<style>
+    body{
+        background: #0F1217;height: 100%; width: 100%; margin: 0px; padding: 0px ;
+    }
+    .block{
+        position: relative;
+        width: 75px;
+        height: 24px;
+        float: left;
+    }
+    input[type="file"]{
+        position:absolute;
+        right:0;
+        top:0;
+        font-size:14px;
+        opacity:0;
+        filter:alpha(opacity=0);
+    }
+</style>
+
+<form action="{:U('/login/upload')}" method="post" enctype="multipart/form-data" name="myform" id="myform" style="height: 100%; width: 100%">
+    <input name="sid" type="hidden" value="{$Think.get.sid|htmlspecialchars}"/>
+    <input name="fileback" type="hidden" value="{$Think.get.fileback|htmlspecialchars}"/>
+
+    <div class="btn btn-default  block" style="float: left; width: 70px; height: 24px;padding: 0;">
+        浏览
+        <input type="file" name="upthumb" value="浏览" />
+    </div>
+</form>
+<script src="__PUBLIC__/js/jquery.min.js?v=2.1.4"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js?v=3.3.5"></script>
+<script type="text/javascript">
+    $('input[name="upthumb"]').change(function(){
+        $('form[name="myform"]').submit();
+    });
+</script>

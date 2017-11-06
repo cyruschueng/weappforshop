@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--360浏览器优先以webkit内核解析-->
+    <title>短秀后统计</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="__PUBLIC__/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/style.css?v=4.0.0" rel="stylesheet">
+    <base target="_self">
+    <style type="text/css">
+        .stat_block{font-size: 24px;padding-bottom: 20px;}
+        .stat_block .stat_ico{line-height:140px; float:left; margin-left:30px; font-size:60px; color:#0099ff}
+        .stat_block .stat_total{float:left; clear:both; margin-top:25px; color: #cc0000; font-size: 40px}
+        .stat_block .stat_label{float: left; clear: both; font-weight: normal !important; font-size: 16px; color: #999}
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="row border-bottom dashboard-header">
+
+
+            <div class="col-sm-12 m-b-m stat_block" style="line-height: 28px; font-size: 14px;">
+                以下数据截止：{:date("Y-m-d")}日 <br/>
+                APP总注册数：{$data.total_app_user}<br/>
+                手机注册数：{$data.total_mobile_user}<br/>
+                微信注册数：{$data.total_weixin_user}<br/>
+                QQ注册数：{$data.total_qq_user}<br/>
+                公众号总数：{$data.total_mp_user}<br/>
+                公众号关注总数：{$data.total_subscribe_user}<br/>
+                总视频数：{$data.total_video}<br/>
+                总播放数：{$data.total_video_play}<br/>
+                总点赞数：{$data.total_video_favorite}<br/>
+                总评论数：{$data.total_comment}<br/>
+                总收藏数：{$data.total_collection}<br/>
+            </div>
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="__PUBLIC__/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="__PUBLIC__/js/content.js"></script>
+    <!-- 欢迎信息 -->
+    <script src="__PUBLIC__/js/welcome.js"></script>
+    <script src="__PUBLIC__/js/plugins/highstock/highstock.js"></script>
+    <script src="__PUBLIC__/js/plugins/highstock/no-data-to-display.js"></script>
+    <script src="__PUBLIC__/js/plugins/highstock/exporting.js"></script>
+    <script src="__PUBLIC__/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="__PUBLIC__/js/plugins/echarts/echarts-all.js"></script>
+    <script src="__PUBLIC__/js/plugins/layer/laydate/laydate.js"></script>
+
+
+</body>
+
+</html>

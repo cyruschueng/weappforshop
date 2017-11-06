@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短秀后台管理系统 - 登录</title>
+    <meta name="keywords" content="美联美客后台管理系统">
+    <meta name="description" content="美联美客后台管理系统">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="__PUBLIC__/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/style.css?v=4.0.0" rel="stylesheet">
+    <link href="__PUBLIC__/css/layer.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/register.css" rel="stylesheet">
+    <style>
+        .form-group .des{
+            color: #666;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .buttons button{
+            width:44%;
+        }
+        .c1{
+            color: #EB645E;
+            float: right;
+        }
+        .fl{
+            float: left;
+        }
+        .mui-checkbox {
+            -webkit-appearance: none;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            background-color: #FFFFFF;
+            border: solid 1px #d9d9d9;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: padding-box;
+            display: inline-block;
+        }
+        .mui-checkbox:checked {
+            background-color: #CCE297;
+            border:none;
+        }
+        
+        
+        .close17{
+        	position: absolute;
+        	top: 2%;
+        	right: 2%;
+        	width: 20px;
+        	height: 20px;       	
+        }
+        
+    </style>
+    <base target="_self">
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+</head>
+
+<body class="gray-bg signin-bg signin">
+    <div class="logo">
+        <img src="/Public/img/signin/logo.png">
+        <p>颐基科技有限公司</p>
+    </div>
+    <div class="middle-left text-left loginscreen  animated fadeInDown">
+        <div>
+            <div class="left1">
+                <img src="/Public/img/signin/longbar1.png">
+            </div>
+            <div class="">
+                <img src="/Public/img/signin/add.png">
+            </div>
+            <h1>快多店后台管理系统</h1>
+            <div class="left1">
+                <img src="/Public/img/signin/longbar.png"> <div class="bms">Backstage Management System </div>
+            </div>
+        </div>
+    </div>
+    <!--注册页面-->
+    <div class="register" id="divFormData1">
+        <div class="content">
+        	
+        	<img src="../../../../Public/images/wrong.png" class="close17" id="close17"/>
+            <p>欢迎加入短秀世界,这里是优质短视频梦工厂</p>
+            <div class="chooseContent">
+                <span>我的身份:</span>
+                <label for="personal" id="personalF">
+                    <input type="radio" name="type" value="personal" id="personal" style="width: auto;" checked="checked">
+                    创作个人
+                </label>
+                <label for="company" id="companyF">
+                    <input type="radio" name="type" value="company" id="company" style="width: auto;">
+                    创作公司
+                </label>
+            </div>
+            <!--创作个人-->
+            <div class="info" id="createPerson">
+                <form name="personal" class="personal" action="{:U('/login/reg')}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="type" value="1" />
+                <div class="item">
+                    <span>姓名:</span>
+                    <input type="text" placeholder="请输入姓名" id="username" name="username" maxlength="26" />
+                    <span style="width: 150px; text-align: left; padding-left: 8px;">用户名在6-26个字符之间</span>
+                </div>
+                <div class="item">
+                    <span>手机号码:</span>
+                    <input type="text" placeholder="请输入手机号码" id="mobile" name="mobile" maxlength="11" />
+                    <span style="width: 150px;  text-align: left; padding-left: 8px;"></span>
+                </div>
+                <div class="item">
+                    <span>验证码:</span>
+                    <input type="text" placeholder="请输入验证码" id="verification" name="verification" maxlength="6" />
+                    <span class="verification verification5">获取</span>
+                </div>
+                <div class="item">
+                    <span>登录密码:</span>
+                    <input type="password" placeholder="请输入登录密码" id="password" name="password" maxlength="26" />
+
+                    <span style="width: 150px;  text-align: left; padding-left: 8px;">密码在6-26个字符之间</span>
+                </div>
+                <div class="item">
+                    <span>再次输入:</span>
+                    <input type="password" placeholder="请再次输入登录密码" id="againPassword" name="password2" maxlength="26" />
+                    <span style="width: 150px;  text-align: left; padding-left: 8px;"></span>
+                </div>
+                <div class="item">
+                    <span>身份证正反面:</span>
+                    <input type="text" name="identity" data-role="pic1" id="pic1" readonly />
+                    <span style="width: 140px; line-height: 30px"><iframe src="{:U('/login/show',array('sid'=>'user','fileback'=>'pic1'))}" scrolling="no" topmargin="0" width="70" height="24" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left;"></iframe> <a href="/Public/img/temp1.jpg" style="color: #fff" target="_blank" ><i class="fa fa-download"></i> 下载示图</a></span>
+                </div>
+                <div class="item">
+                    <span>个人作品链接:</span>
+                    <input type="text" name="url" maxlength="225" />
+                </div>
+                <!--同意协议-->
+                <div class="protocol">
+                    <label for="protocol">
+                        <input type="checkbox" id="protocol" name="protocol" value="1" />
+                        同意《<a href="http://hd.kuaiduodian.com/index.php?s=/tvshow/agreement" style="color: #fff" target="agreement" >短秀视频管理平台用户协议</a>》
+                    </label>
+                </div>
+                <!--提交审核-->
+                <div class="box">
+                    <span class="check" id="check">提交审核</span>
+                </div>
+                    </form>
+            </div>
+            <!--创作公司-->
+            <div class="info" id="createCompany">
+                <form name="company" class="company" action="{:U('/login/reg')}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="type" value="company" />
+                <div class="item">
+                    <span>姓名:</span>
+                    <input type="text" placeholder="请输入姓名" name="username" maxlength="26" />
+                    <span style="width: 150px; text-align: left; padding-left: 8px;" data-role="username">用户名在6-26个字符之间</span>
+                </div>
+                <div class="item">
+                    <span>公司名称:</span>
+                    <input type="text" placeholder="请输入公司名称" name="company" maxlength="125">
+                    <span style="width: 150px; text-align: left; padding-left: 8px; " data-role="company">正确输入申请公司名称</span>
+                </div>
+                <div class="item">
+                    <span>营业执照:</span>
+                    <input type="text" name="licence" readonly id="pic2" />
+                    <span style="width: 140px; line-height: 30px"><iframe src="{:U('/login/show',array('sid'=>'user','fileback'=>'pic2'))}" scrolling="no" topmargin="0" width="70" height="24" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe> <a href="/Public/img/temp2.jpg" style="color: #fff" target="_blank" ><i class="fa fa-download"></i> 下载示图</a></span>
+                </div>
+                <div class="item">
+                    <span>法人身份证:</span>
+                    <input type="text" name="identity" readonly id="pic3"  />
+                    <span style="width: 140px; line-height: 30px"><iframe src="{:U('/login/show',array('sid'=>'user','fileback'=>'pic3'))}" scrolling="no" topmargin="0" width="70" height="24" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe> <a href="/Public/img/temp1.jpg" style="color: #fff" target="_blank" ><i class="fa fa-download"></i> 下载示图</a></span>
+
+                </div>
+                <div class="item">
+                    <span>手机号码:</span>
+                    <input type="text" placeholder="请输入手机号码" name="mobile" maxlength="11" />
+                    <span style="width: 150px; text-align: left; padding-left: 8px;" data-role="mobile">请正确输入手机号码</span>
+                </div>
+                <div class="item">
+                    <span>验证码:</span>
+                    <input type="text" placeholder="请输入验证码" maxlength="6" name="verification" />
+                    <span class="verification verification5">获取</span>
+                </div>
+                <div class="item">
+                    <span>登录密码:</span>
+                    <input type="password" placeholder="请输入登录密码" maxlength="26" name="password" />
+                    <span style="width: 150px; text-align: left; padding-left: 8px;"  >密码在6-26个字符之间</span>
+                </div>
+                <div class="item">
+                    <span>再次输入:</span>
+                    <input type="password" placeholder="请再次输入登录密码" maxlength="26" name="password2" />
+
+                </div>
+                <!--同意协议-->
+                <div class="protocol">
+                    <label for="protocol">
+                        <input type="checkbox" id="protocol1" name="protocol1" value="1" />
+                        同意《<a href="http://hd.kuaiduodian.com/index.php?s=/tvshow/agreement" style="color: #fff" target="agreement" >短秀视频管理平台用户协议</a>》
+                    </label>
+                </div>
+                <!--提交审核-->
+                <div class="box">
+                    <span class="check" id="check1">提交审核</span>
+                </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div class="middle-right text-center loginscreen  animated fadeInDown">
+        <div>
+            <div class="p-xxs m-t-md">
+                <img src="__PUBLIC__/img/signin/icon.png" class="p-m" >
+            </div>
+
+            <form target="_self" role="form" method="post" action="{:U('/login/post')}" style="padding: 0 10px;">
+                <div class="form-group" style="border-bottom: 1px solid #ddd;">
+                    <span class="des">账号:</span>
+                    <input type="text" name="uname" class="form-control sigininput"  required="" style="border: none;">
+                </div>
+
+                <div class="form-group" style="border-bottom: 1px solid #ddd;">
+                    <span class="des" style="margin-left: -4px;">密码:</span>
+                    <input type="password" name="pwd" class="form-control sigininput"  required="" style="border: none;">
+                </div>
+                <div class="clearfix" style="line-height: 27px;margin-bottom: 20px;">
+                    <label for="login" class="fl">
+                        <input type="checkbox" id="login" class="mui-checkbox">
+                        自动登录
+                    </label>
+                    <span class="c1">忘记密码 ?</span>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="register" class="btn m-b-md sigininput" style="margin-right: 10%;background: #FEA25F;color: #fff;">注 册</button>
+                    <button type="submit" class="btn m-b-md sigininput" style="background: #32B16C;color: #fff;">登 录</button>
+                </div>
+                <!--<button type="submit " class="btn btn-primary block full-width m-b-md sigininput">登 录</button>-->
+                <p class="text-muted text-center">
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="__PUBLIC__/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/js/layer.js"></script>
+    <script src="__PUBLIC__/js/comm.js"></script>
+    <script type="text/javascript">
+        $('#personal').click();
+        var global_time = 0;
+        function globaltime(){
+            if(global_time > 0){
+                $('.verification5').text("还剩"+global_time+"秒");
+                setTimeout(function(){
+                    global_time = global_time - 1;
+                        globaltime();
+                }, 1000);
+            }else{
+                $('.verification5').text("获取");
+            }
+        }
+        /**
+         * 验证码
+         */
+        $(".verification5").bind("click", function () {
+            if(global_time > 0){
+                tools.alert("请登"+global_time+"秒后操作~");
+                return false;
+            }
+            var mobile = $(this).parent().parent().find('input[name="mobile"]').val();
+            if (!tools.isMobile(mobile)) {
+                tools.alert("输入的手机号码格式不正确！");
+                return false;
+            }
+            $.ajax({
+                url: '{:U("/login/vercode")}',
+                dataType: "json",
+                type: "POST",
+                data: {mobile:mobile},
+                success: function (data) {
+                    if(data.state == 1){
+                        tools.alert("验证码发送成功,5分钟內有效");
+                        global_time = 60;
+                        globaltime();
+                    }else{
+                        tools.alert(data.msg);
+                    }
+                    return true;
+                }
+            });
+        });
+
+        $("#register").click(function(){
+            $(".register").show();
+            return false;
+        })
+
+        //创作公司
+        $("#companyF").click(function(){
+            var inputList = $("#createPerson").find("input");
+            $("#personal").removeAttr("checked");
+            $("#createPerson").hide();
+            inputList.val("");
+            $("#createCompany").show();
+        })
+
+        //创作个人
+        $("#personalF").click(function(){
+            var inputList = $("#createCompany").find("input");
+            $("#company").removeAttr("checked");
+            $("#createPerson").show();
+            inputList.val("");
+            $("#createCompany").hide();
+        })
+
+        // 公司提交
+        // 个人提交
+        $("#check1").click(function(){
+            var username = $.trim($(".company input[name='username']").val()),
+                    type = $.trim($('.company input[name="type"]').val()),
+                    company =$.trim( $('.company input[name="company"]').val()),
+                    licence = $.trim($('.company input[name="licence"]').val()),
+                    mobile = $.trim($(".company input[name='mobile']").val()),
+                    verification = $.trim($(".company input[name='verification']").val()),
+                    password = $.trim($(".company input[name='password']").val()),
+                    password2 = $.trim($(".company input[name='password2']").val()),
+                    identity = $.trim($(".company input[name='identity']").val());
+
+            if($('input[name="protocol1"]:checked').size() == 0){
+                tools.alert("必须同意注册协议,才能注册本系统!");
+                return false;
+            }
+
+
+            if(!username){
+                tools.alert("请填写姓名!");
+                return false;
+            }
+            if(!mobile){
+                tools.alert("请填写手机号码!");
+                return false;
+            }
+            if (!tools.isMobile(mobile)) {
+                tools.alert("输入的手机号码格式不正确！");
+                return false;
+            }
+            if(!verification){
+                tools.alert("请填写验证码!");
+                return false;
+            }
+            if(!password){
+                tools.alert("请输入密码!");
+                return false;
+            }
+            if(!password2){
+                tools.alert("请再次输入密码!");
+                return false;
+            }
+            if(password !== password2){
+                tools.alert("两次输入的密码请保持一致!")
+                return false;
+            }
+            if(!identity){
+                tools.alert("请上传身份证信息!")
+                return false;
+            }
+            if(!licence){
+                tools.alert("请上传营业执照信息!")
+                return false;
+            }
+
+            $.ajax({
+                url: '{:U("/login/reg")}',
+                dataType: "json",
+                type: "POST",
+                data: {type:type,mobile:mobile,uname:username,password:password,password2:password2,
+                    verification:verification,identity:identity,licence:licence,company:company},
+                success: function (data) {
+                    if(data.state == 1){
+                        tools.alert("注册成功~",function(){
+                            window.location.reload();
+                        });
+                    }else{
+                        tools.alert(data.msg);
+                    }
+                    return true;
+                }
+            });
+            return true;
+        });
+
+        // 个人提交
+        $("#check").click(function(){
+            var username = $.trim($(".personal input[name='username']").val()),
+                    type = $('input[name="type"]').val(),
+                mobile = $.trim($(".personal input[name='mobile']").val()),
+                verification = $.trim($(".personal input[name='verification']").val()),
+                password = $.trim($(".personal input[name='password']").val()),
+                password2 = $.trim($(".personal input[name='password2']").val()),
+                identity = $.trim($(".personal input[name='identity']").val()),
+                url = $.trim($(".personal input[name='url']").val());
+
+            if($('input[name="protocol"]:checked').size() == 0){
+                tools.alert("必须同意注册协议,才能注册本系统!");
+                return false;
+            }
+
+            if(!username){
+                tools.alert("请填写姓名!");
+                return false;
+            }
+            if(!mobile){
+                tools.alert("请填写手机号码!");
+                return false;
+            }
+            if (!tools.isMobile(mobile)) {
+                tools.alert("输入的手机号码格式不正确！");
+                return false;
+            }
+            if(!verification){
+                tools.alert("请填写验证码!");
+                return false;
+            }
+            if(!password){
+                tools.alert("请输入密码!");
+                return false;
+            }
+            if(!password2){
+                tools.alert("请再次输入密码!");
+                return false;
+            }
+            if(password !== password2){
+                tools.alert("两次输入的密码请保持一致!")
+                return false;
+            }
+            if(!identity){
+                tools.alert("请上传身份证信息!")
+                return false;
+            }
+            if(!url){
+                tools.alert("请上传作品链接!")
+                return false;
+            }
+            $.ajax({
+                url: '{:U("/login/reg")}',
+                dataType: "json",
+                type: "POST",
+                data: {type:type,mobile:mobile,uname:username,password:password,password2:password2,
+                    verification:verification,identity:identity,url:url},
+                success: function (data) {
+                    if(data.state == 1){
+                        tools.alert("注册成功~",function(){
+                            window.location.reload();
+                        });
+                    }else{
+                        tools.alert(data.msg);
+                    }
+                    return true;
+                }
+            });
+            return true;
+        });
+        
+//      关闭注册页面
+		var divFormDatas1=document.getElementById('divFormData1');
+		var close1=document.getElementById('close17');
+		close1.onclick=function(){
+			divFormDatas1.style.display='none';
+		}
+        
+        
+
+    </script>
+    <!--统计代码，可删除-->
+</body>
+
+</html>

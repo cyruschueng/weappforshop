@@ -1,0 +1,419 @@
+<extend name="Layout/master" />
+<block name="title">视频编辑-</block>
+<style>
+    input[type="radio"]{
+
+    }
+</style>
+<block name="head">
+</block>
+<block name="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class=""> <a href="{:U('/short_video/index')}" target="_self" class="btn" style="background: #e00214;color: #fff;">返回</a> </div>
+                <div class="ibox-title">
+                    <h5><a href="{:U('/short_video/index')}" style="color: #e00214;"> 发布视频</a> > <small>视频编辑</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="form1" name="edit" target="_self" action="{:U('/short_video/edit')}" class="form-horizontal">
+                        <input type="hidden" name="id" value="{$short_video.id}" />
+                        <input type="hidden" name="url" value="{$short_video.url}" />
+                        <input type="hidden" name="size" value="{$short_video.size}" />
+                        <input type="hidden" name="size_text" value="{$short_video.size_text}" />
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">视频标题 <span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-4">
+                                <input type="text" title="{$short_video.original_title}" name="title" value="{$short_video.title}" class="form-control" required="" aria-required="true" placeholder="请输入视频标题">
+                            </div>
+                            <label class="col-sm-2 control-label">发布平台：</label>
+                            <div class="col-sm-4">
+                                <label class="checkbox-inline i-checks">
+                                <input type="radio"  name="platform" <if condition="empty($short_video['platform'])">checked</if> value="0" /> 不限</label>
+                                <label class="checkbox-inline i-checks">
+                                <input type="radio" name="platform" <if condition="$short_video['platform'] eq 1">checked</if> value="1" /> 短秀H5</label>
+                                    <label class="checkbox-inline i-checks">
+                                <input type="radio" name="platform" <if condition="$short_video['platform'] eq 2">checked</if> value="2" /> 短秀App</label>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">视频详情：</label>
+                            <div class="col-sm-10">
+                                <script type="text/plain" id="subtitle"  name="subtitle">{$short_video.subtitle}</script>
+                                <span class="help-block m-b-none"></span> </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <if condition="$short_video[is_show] eq 0 OR empty($short_video)">
+                            <label class="col-sm-2 control-label">视频分类<span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-4">
+                                <volist name="short_video_tag" id="tag">
+                                    <if condition="$tag.id neq 2">
+                                    <label class="checkbox-inline i-checks">
+                                    <input type="radio" name="type" <if condition="$tag[id] eq $short_video[type]">checked</if> value="{$tag[id]}">{$tag.tag_name}</label>
+                                    </if>
+                                </volist>
+                            </div>
+                            </if>
+                            <if condition="$user['role'] lt 2">
+                            <label <if condition="$short_video[is_show] eq 0 OR empty($short_video)">class="col-sm-1 control-label"<else/>class="col-sm-2 control-label"</if>>权重：</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="weight" value="{$short_video.weight}" class="form-control" placeholder="值越大越靠前">
+                            </div>
+
+                            <!--<label class="col-sm-2 control-label">是否首页显示：</label>-->
+                            <!--<div class="col-sm-1">-->
+                                <!--<label class="checkbox-inline i-checks">-->
+                                    <!--<input type="checkbox" name="is_index" <if condition="   1 eq $short_video[is_index]">checked</if> value="1">是</label>-->
+                            <!--</div>-->
+                            <label class="col-sm-2 control-label">是否推荐：</label>
+                            <div class="col-sm-1">
+                                <label class="checkbox-inline i-checks">
+                              <input type="checkbox" name="is_hot" <if condition="1 eq $short_video[is_hot]">checked</if> value="1" />是</label>
+                            </div>
+                            </if>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">视频标签<span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-10">
+                                <volist id="tag" name="goods_tags">
+                                    <label class="checkbox-inline i-checks">
+                                        <input type="checkbox" class="tag" data-id="{$tag.id}" name="tag_id[]" <if condition="in_array($tag['id'], explode(',',$short_video['tag_list']))">checked</if> value="{$tag.id}" /> {$tag.tag_name}</label>
+                                </volist>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">视频文件(不可修改)<span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-4" id="pickfilesvideo">
+
+                                <div class="bootstrap-filestyle input-group">
+                                    <div id='newresult' class="view_img form-control" style="max-width:400px;max-hight:20px;overflow-y: scroll; " placeholder="请输入视频标题">
+                                        {$short_video.filename}
+                                    </div>
+                                    <span class="group-span-filestyle input-group-btn" tabindex="0">
+                                  <if condition="!$short_video['url']">
+                                    <label for="filestyle-0" class="btn btn-default " id="pickfiles"><span class="glyphicon glyphicon-folder-open"></span> 选择视频</label>
+                                  </if>
+                                </div>
+                                </span>
+                                <span class="help-block m-b-none" id='progress'></span>
+                            </div>
+                            <label class="col-sm-2 control-label">视频封面(可选)：</label>
+                            <div class="col-sm-4">
+                                <img class="pic_view_detail" src="<if condition="$short_video['pic']">{$short_video['pic']}<else/>/Public/img/4041.jpg</if>" style="max-width: 150px; max-height: 150px;" /> <div style="margin: 4px; color:red">*标准
+                                横版尺寸为：366*184
+                                竖版为：366*488</div>
+                                <input type="hidden" id="pic" data-url="{$short_video.pic}" name="pic" value="{$short_video.pic}" class="view_img form-control" placeholder="不上传封面将取视频的第一帧作为封面">
+                                <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'short_video','fileback'=>'pic'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span>
+                            </div>
+
+                        </div>
+
+                        <if condition="$use_agreement">
+                            <input type="hidden" name="use_agreement" value="1" />
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">发布协议：</label>
+                            <div class="col-sm-10">
+                                <input type="checkbox" name="agreement" checked value="1" /> 同意《<a href="http://hd.kuaiduodian.com/index.php?s=/tvshow/agreement2" target="_blank" >短秀平台发布协议</a>》
+                                <span class="help-block m-b-none"></span> </div>
+                        </div>
+                            <else/>
+                            <input type="hidden" name="use_agreement" value="0" />
+                        </if>
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <!--<button class="btn btn-primary" type="submit" onclick="checktosubmit()">保存内容</button>-->
+                                <button type="button" class="btn" onclick="checktosubmit()" style="background: #e00214;color: #fff;padding: 5px 20px;">发布</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <!-- iCheck -->
+    <script src="__PUBLIC__/js/plugins/iCheck/icheck.min.js"></script>
+    <!--<script src="__PUBLIC__/js/plugins/layer/layer.js"></script>-->
+    <script type="text/javascript">
+        var serverFileId = 0;
+        $(document).ready(function() {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+
+            $('input.tag').on('ifChecked', function(event){ //ifCreated 事件应该在插件初始化之前绑定
+                if($('input.tag:checked').size()>3){
+                    $(this).iCheck('uncheck'); //移除 checked 状态
+                    $(this).parent().removeClass('checked');
+                        layer.msg("最多只能选择3个标签~", function(){
+                            $('input.tag').each(function(){
+
+                                if(!$(this).is(":checked")){
+                                    $(this).parent().removeClass('checked');
+                                }
+                            });
+
+                        });
+
+                    return true;
+                }
+            });
+
+            var editor_a = UE.getEditor('subtitle', {
+                initialFrameHeight: 100,
+                serverUrl: '__PUBLIC__/js/plugins/ueditor/php/controller.php'
+            });
+
+        });
+
+        function checktosubmit() {
+            var txt_firstname = $.trim($("#firstname").attr("value"))
+            var txt_lastname = $.trim($("#lastname").attr("value"))
+
+
+            var isSuccess = 1;
+            if ($("input[name='title']").val().length == 0) {
+                layer.msg('视频标题不能够为空' || "提示信息！");
+
+                isSuccess = 0;
+                return;
+            }
+
+            if($('input[name="id"]').val()=="" || '{$short_video.is_show}' == "0"){
+                if ($("input[name='type']:checked").val() == undefined) {
+                    layer.msg('请您选择一个分类' || "提示信息！");
+
+                    isSuccess = 0;
+                    return;
+                }
+            }
+
+            if ($("input[name='url']").val() != '') {
+
+            } else {
+                if ($.trim($('#newresult').text()) != '' && serverFileId == 0) {
+                    layer.msg('等待视频上传完毕' || "提示信息！");
+                    isSuccess = 0;
+                    return;
+                }
+            }
+            if (serverFileId == 0 && $("input[name='url']").val() == '') {
+
+                layer.msg('请您上传视频' || "提示信息！");
+                isSuccess = 0;
+                return;
+            }
+            if ($("input[name='url']").val() != '') {
+
+            } else {
+                $("input[name='url']").val(serverFileId);
+                $("input[name='size_text']").val(size_text);
+                $("input[name='size']").val(size);
+            }
+
+            // 必须要同意协议才能发布视频
+            if($('input[name="use_agreement"]').val() == 1){
+                if($("input[name='agreement']:checked").size() == 0){
+                    layer.msg('必须同意短秀发布协议才能发布视频！');
+                    return false;
+                }
+            }
+            if (isSuccess == 1) {
+                form1.submit();
+            }
+        }
+
+        function changeGoodsClass(_this) {
+            var v = $(_this).val();
+            if (v == 2) {
+                $("#probabilityShow").show();
+                $("#short_videoPriceShow").hide();
+                $("#short_videoPriceShowLine").hide();
+            } else if (v == 3) {
+                $("#short_videoPriceShow").show();
+                $("#short_videoPriceShowLine").show();
+                $("#probabilityShow").hide();
+
+            } else {
+                $("#short_videoPriceShow").hide();
+                $("#short_videoPriceShowLine").hide();
+                $("#probabilityShow").hide();
+            }
+        }
+
+        function changeGoodsType(_this) {
+            var v = $(_this).val();
+            if (v == 2) {
+                $("#cardShow").show();
+                $("#cardShowLine").show();
+                $("#jumpUrlShow").hide();
+                $("#jumpUrlShowLine").hide();
+            } else if (v == 3 || v == 4) {
+                $("#jumpUrlShow").show();
+                $("#jumpUrlShowLine").show();
+                $("#cardShow").hide();
+                $("#cardShowLine").hide();
+            } else {
+                $("#cardShow").hide();
+                $("#cardShowLine").hide();
+                $("#jumpUrlShow").hide();
+                $("#jumpUrlShowLine").hide();
+
+            }
+        }
+    </script>
+
+    <script src="//qzonestyle.gtimg.cn/open/qcloud/js/vod/sdk/uploaderh5V3.js" charset="utf-8"></script>
+    <script>
+        var serverFileId = 0;
+        var size_text = 0;
+        var size = 0,
+            Log = qcVideo.get('Log'),
+            JSON = qcVideo.get('JSON'),
+            util = qcVideo.get('util'),
+            Code = qcVideo.get('Code'),
+            Version = qcVideo.get('Version');
+        var ErrorCode = qcVideo.get('ErrorCode');
+        ErrorCode.UN_SUPPORT_BROWSE !== qcVideo.uploader.initUGC(
+            //1: 上传基础条件
+            {
+                upBtnId: "pickfiles", //上传按钮ID（任意页面元素ID）
+                //
+                //isTranscode: true, //是否转码
+                // isWatermark:true,
+                //       transcodeNotifyUrl: 
+                /*
+                    @desc 从服务端获取签名的函数。该函数包含两个参数：
+                    argObj: 待上传文件的信息，关键信息包括：
+                        f: 视频文件名(可从getSignature的argObj中获取)，
+                        ft: 视频文件的类型(可从getSignature的argObj中获取)，
+                        fs: 视频文件的sha1值(必须从getSignature的argObj中获取)
+                    callback：客户端从自己的服务端得到签名之后，调用该函数将签名传递给SDK                    
+                */
+                getSignature: function(argObj, callback) {
+                    // 调用APP后台服务器，返回签名
+                    console.log(argObj);
+
+                    var sigUrl = '/auto/getSign.php?' +
+                        'f=' + encodeURIComponent(argObj.f) +
+                        '&ft=' + encodeURIComponent(argObj.ft) +
+                        '&fs=' + encodeURIComponent(argObj.fs);
+                    $.get(sigUrl).done(function(ret) {
+                        console.log(ret);
+                        callback(ret);
+                    })
+                },
+                after_sha_start_upload: true //上传分为两个阶段，sha计算和文件网络传输；这个选项设置是否在sha计算完成后，立即进行网络传输上传 (默认非立即上传)
+                    ,
+                sha1js_path: '/Public/js/calculator_worker_sha1.js' //计算sha1的位置  ，默认为 'http://你的域名/calculator_worker_sha1.js'
+            }
+            //2: 回调函数
+            , {
+                /**
+                 * 更新文件状态和进度
+                 * @param args { id: 文件ID, size: 文件大小, name: 文件名称, status: 状态, percent: 进度,speed: 速度, errorCode: 错误码 }
+                 */
+                onFileUpdate: function(args) {
+                    console.log(args);
+                    if (args.code == Code.SHA_FAILED)
+                        return alert('该浏览器无法计算SHA')
+                    var $line = $('#' + args.id);
+                    if (!$line.get(0)) {
+                        $('#result').append('<div class="line" id="' + args.id + '"></div>');
+                        $line = $('#' + args.id);
+                    }
+
+                    var finalFileId = '';
+                    if (args.code == Code.UPLOAD_WAIT) {
+                        // $('#pickfiles').addClass()
+                        qcVideo.uploader.startUpload();
+                    }
+
+
+                    if (args.code == Code.UPLOAD_DONE) {
+                        finalFileId = '文件ID>>' + args.serverFileId;
+                        serverFileId = args.serverFileId;
+                        size_text = args.size_text;
+                        size = args.size;
+                        $("input[name='url']").val(serverFileId);
+                        $("input[name='size_text']").val(size_text);
+                        $("input[name='size']").val(size);
+                    }
+                    console.log(args);
+
+                    $('#newresult').html('' +
+                        '' + args.name + " (" + util.getHStorage(args.size) + ")"
+                    );
+                    $('#progress').html(
+
+                        '状态：' + util.getFileStatusName(args.status) + '' +
+                        (args.percent ? '<strong style="color: #92002c" > >> 进度：' + args.percent + '%' : '</strong>') +
+                        (args.speed ? ' >> 速度：' + args.speed + '' : '') + finalFileId);
+                },
+                /**
+                 * 文件状态发生变化
+                 * @param info  { done: 完成数量 , fail: 失败数量 , sha: 计算SHA或者等待计算SHA中的数量 , wait: 等待上传数量 , uploading: 上传中的数量 }
+                 */
+                onFileStatus: function(info) {
+                    console.log('各状态总数', info);
+                },
+                /**
+                 *  上传时错误文件过滤提示
+                 * -1: 文件类型异常,-2: 文件名异常 , message: 错误原因 ， solution: 解决方法 }
+                 */
+                onFilterError: function(args) {
+                    layer.msg(args.message + (args.solution ? (';solution==' + args.solution) : '') || "提示信息！");
+                    console.log('message:' + args.message + (args.solution ? (';solution==' + args.solution) : ''));
+                }
+            }
+        );
+
+
+
+        /**功能： 启动上传
+        参数： 无;
+        返回： 无;*/
+        $("#start").click(function() {
+            qcVideo.uploader.startUpload();
+        })
+
+
+        /**功能： 停止上传
+        参数： 无;
+        返回： 无;*/
+        $("#stop").click(function() {
+            qcVideo.uploader.stopUpload()
+        });
+
+        /**
+        功能： 恢复上传（错误文件重新上传）
+        参数： 无;
+        返回： 无;
+        */
+        $("#restart").click(function() {
+            qcVideo.uploader.reUpload();
+        })
+
+        /**功能： 删除本地上传任务
+        参数： fid 文件id;
+        返回： 无;*/
+        $("#delit").click(function() {
+            qcVideo.uploader.deleteFile(finalFileId)
+        })
+    </script>
+</block>

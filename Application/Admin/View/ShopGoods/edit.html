@@ -1,0 +1,137 @@
+<extend name="Layout/master" />
+<block name="title">商品编辑-</block>
+<block name="head">
+</block>
+<block name="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class=""> <a href="{:U('/shop_goods/index')}" target="_self" class="btn" style="background: #e00214;color: #fff;">返回</a> </div>
+                <div class="ibox-title">
+                    <h5><a href="{:U('/shop_goods/index')}" style="color: #e00214;">添加商品</a> > <small>商品编辑</small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" id="form1" name="edit" target="_self" action="{:U('/shop_goods/edit')}" class="form-horizontal">
+                        <input type="hidden" name="id" value="{$shop_goods.id}" />
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称 <span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name" value="{$shop_goods.name}" class="form-control" required="" aria-required="true" placeholder="输入标题">
+                            </div>
+                        </div>
+                  
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">上传素材： <span  style="color:#e91e63 ">*</span>：</label>
+              
+                            <div class="col-sm-3">
+                                <img class="pic_view_detail  pic_kdd" src="<if condition="$shop_goods['pic']">{$shop_goods['pic']}<else/>/Public/img/4041.jpg</if>" style="max-width: 320px; max-height: 160px;" />
+                                <div style="margin: 4px; color:red">*标准尺寸为：640*320</div>
+                                <input type="hidden" id="pic" data-url="{$shop_goods.pic}" name="pic" value="{$shop_goods.pic}" class="view_img form-control" required="" aria-required="true" placeholder="请上传商品图片">
+                                <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'shop_goods','fileback'=>'pic'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span>
+                            </div>
+                            <div class="col-sm-3">
+                                <img class="pic_view_detail1 pic_kdd" src="<if condition="$shop_goods['pic1']">{$shop_goods['pic1']}<else/>/Public/img/4041.jpg</if>" style="max-width: 320px; max-height: 160px;" />
+                                <div style="margin: 4px; color:red">*标准尺寸为：640*320</div>
+                                <input type="hidden" id="pic1" data-url="{$shop_goods.pic}" name="pic1" value="{$shop_goods.pic1}" class="view_img form-control" required="" aria-required="true" placeholder="请上传商品图片">
+                                <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'shop_goods','fileback'=>'pic1','i'=>'1'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span>
+                            </div>
+                            
+                            
+                            <div class="col-sm-3">
+                                <img class="pic_view_detail2 pic_kdd" src="<if condition="$shop_goods['pic2']">{$shop_goods['pic2']}<else/>/Public/img/4041.jpg</if>" style="max-width: 320px; max-height: 160px;" />
+                                <div style="margin: 4px; color:red">*标准尺寸为：640*320</div>
+                                <input type="hidden" id="pic2" data-url="{$shop_goods.pic}" name="pic2" value="{$shop_goods.pic2}" class="view_img form-control" required="" aria-required="true" placeholder="请上传商品图片">
+                                <span class="help-block m-b-none"><iframe src="{:U('/admin/upload/show',array('sid'=>'shop_goods','fileback'=>'pic2','i'=>'2'))}" scrolling="no" topmargin="0" width="300" height="36" marginwidth="0" marginheight="0" frameborder="0" align="left" style="margin-top:3px; float:left"></iframe></span>
+                            </div>
+                        </div>
+
+               <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                       
+                            <label class="col-sm-2 control-label">分类<span  style="color:#e91e63 ">*</span>：</label>
+                            <div class="col-sm-4">
+                                <volist name="shop_goods_tag" id="tag">
+                               
+                                    <label class="checkbox-inline i-checks">
+                                    <input type="radio" name="category_id" <if condition="$tag[id] eq $shop_goods[category_id]">checked</if> value="{$tag[id]}">{$tag.name}</label>
+                              
+                                </volist>
+                            </div>
+                
+                        </div>
+       <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">价格： </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="minprice" value="{$shop_goods.minprice}" class="form-control" required="" aria-required="true" placeholder="权重越大越靠前展示">
+                            </div>
+                        </div>
+
+                 <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">详情：</label>
+                            <div class="col-sm-10">
+                                <script type="text/plain" id="content"  name="content">{$shop_goods.content}</script>
+                                <span class="help-block m-b-none"></span> </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">权重： </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="order" value="{$shop_goods.order}" class="form-control" required="" aria-required="true" placeholder="权重越大越靠前展示">
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                               <div class="form-group">
+                            <label class="col-sm-2 control-label">库存： </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="stores" value="{$shop_goods.stores}" class="form-control" required="" aria-required="true" placeholder="100">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn" type="submit" style="background: #e00214;color: #fff;">保存内容</button>
+                                <!--<button class="btn btn-white" type="reset">取消</button>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <!-- iCheck -->
+    <script src="__PUBLIC__/js/plugins/iCheck/icheck.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+
+
+
+
+      var editor_a = UE.getEditor('content', {
+                initialFrameHeight: 100,
+                serverUrl: '__PUBLIC__/js/plugins/ueditor/php/controller.php'
+            });
+    </script>
+</block>

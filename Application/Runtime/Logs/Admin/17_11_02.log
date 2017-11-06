@@ -1,0 +1,1320 @@
+[ 2017-11-02T00:27:59+08:00 ] 139.162.116.133 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.088966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.089104s ]
+
+[ 2017-11-02T00:35:21+08:00 ] 47.52.210.90 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-11-02T00:58:16+08:00 ] 183.240.198.121 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-11-02T01:10:17+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:10:17+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005112s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:10:17+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:28:04+08:00 ] 183.240.198.121 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:28:04+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:28:04+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005119s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:28:04+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:37:00+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:37:00+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:37:00+08:00 ] 183.240.198.121 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:37:01+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:38:01+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:38:01+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:38:01+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:38:01+08:00 ] 183.240.198.121 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:39:16+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:39:16+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001492s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:39:16+08:00 ] 183.240.198.121 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001931s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:39:16+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:42:52+08:00 ] 183.240.198.121 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:42:52+08:00 ] 183.240.198.121 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:42:52+08:00 ] 183.240.198.121 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T01:42:52+08:00 ] 183.240.198.121 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T04:11:54+08:00 ] 168.1.128.34 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+
+[ 2017-11-02T07:04:08+08:00 ] 106.11.225.176 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-11-02T09:09:47+08:00 ] 54.219.178.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-11-02T09:27:47+08:00 ] 14.153.124.108 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-11-02T09:28:13+08:00 ] 14.153.124.108 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-11-02T09:34:38+08:00 ] 117.136.40.187 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+
+[ 2017-11-02T09:40:46+08:00 ] 117.136.40.187 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:40:46+08:00 ] 117.136.40.187 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:40:46+08:00 ] 117.136.40.187 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002443s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:40:46+08:00 ] 117.136.40.187 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:49:31+08:00 ] 117.136.40.187 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:49:31+08:00 ] 117.136.40.187 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:49:32+08:00 ] 117.136.40.187 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:49:32+08:00 ] 117.136.40.187 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:51:56+08:00 ] 117.136.40.187 /allthing/adminuserapi/getShopName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:51:57+08:00 ] 117.136.40.187 /allthing/adminuserapi/getByUid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:52:34+08:00 ] 117.136.40.187 /allthing/adminuserapi/getShopName
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T09:52:34+08:00 ] 117.136.40.187 /allthing/adminuserapi/getByUid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T10:31:40+08:00 ] 140.205.225.201 /showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+ERR: 无法加载控制器:Showcase
+
+[ 2017-11-02T10:31:41+08:00 ] 140.205.225.201 /struts2-showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载控制器:Struts2-showcase
+
+[ 2017-11-02T10:31:41+08:00 ] 140.205.225.201 /integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载控制器:Integration
+
+[ 2017-11-02T10:51:01+08:00 ] 169.54.244.75 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+
+[ 2017-11-02T11:22:45+08:00 ] 138.246.253.19 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-11-02T13:42:17+08:00 ] 117.136.40.199 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001750s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:42:17+08:00 ] 117.136.40.199 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:42:17+08:00 ] 117.136.40.199 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:42:17+08:00 ] 117.136.40.199 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:53:09+08:00 ] 117.136.40.199 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:53:09+08:00 ] 117.136.40.199 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001557s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:53:09+08:00 ] 117.136.40.199 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002873s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T13:53:09+08:00 ] 117.136.40.199 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T14:31:06+08:00 ] 175.10.95.90 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.1042s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0015s ]
+SQL: INSERT INTO `weapp_statics` (`day`,`shopid`,`pv`,`uv`,`uvex`,`pvex`) VALUES ('1509552000','29','1','1','1','1') [ RunTime:0.0191s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2017-11-02T14:31:06+08:00 ] 175.10.95.90 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0819s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0023s ]
+SQL: INSERT INTO `weapp_statics` (`day`,`shopid`,`pv`,`uv`,`uvex`,`pvex`) VALUES ('1509552000','29','1','1','1','1') [ RunTime:0.0199s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0921s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC  [ RunTime:0.0016s ]
+
+[ 2017-11-02T14:31:06+08:00 ] 175.10.95.90 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001450s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0941s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0026s ]
+SQL: INSERT INTO `weapp_statics` (`day`,`shopid`,`pv`,`uv`,`uvex`,`pvex`) VALUES ('1509552000','29','1','1','1','1') [ RunTime:0.0216s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0633s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0914s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0012s ]
+
+[ 2017-11-02T14:31:07+08:00 ] 175.10.95.90 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=081FUcQv0trNph19wPQv0WCVPv0FUcQ9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0046s ]
+SQL: INSERT INTO `weapp_statics` (`day`,`shopid`,`pv`,`uv`,`uvex`,`pvex`) VALUES ('1509552000','29','1','1','1','1') [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0652s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0025s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('LYQ5BwdV4sxbeyP6zumqrQ==','oDIAe0RYs_RO6wx6DmQVV9qY00jw','1510468267','081FUcQv0trNph19wPQv0WCVPv0FUcQ9') [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0RYs_RO6wx6DmQVV9qY00jw' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-02T14:31:07+08:00 ] 175.10.95.90 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-11-02T16:52:30+08:00 ] 140.205.201.36 /showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+ERR: 无法加载控制器:Showcase
+
+[ 2017-11-02T16:52:30+08:00 ] 140.205.201.36 /struts2-showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+ERR: 无法加载控制器:Struts2-showcase
+
+[ 2017-11-02T16:52:30+08:00 ] 140.205.201.36 /integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+ERR: 无法加载控制器:Integration
+
+[ 2017-11-02T17:31:47+08:00 ] 45.55.27.166 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-11-02T18:01:02+08:00 ] 175.9.180.70 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001891s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0623s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0014s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0844s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0003s ]
+
+[ 2017-11-02T18:01:02+08:00 ] 175.9.180.70 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0629s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0023s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0898s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0027s ]
+
+[ 2017-11-02T18:01:02+08:00 ] 175.9.180.70 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0635s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0887s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC  [ RunTime:0.0025s ]
+
+[ 2017-11-02T18:01:02+08:00 ] 175.9.180.70 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=021InpLU0dDi6U1WELIU0DenLU0InpLp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0040s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('AD6sgHyzmJLElOuoz4si3A==','oDIAe0Sbsa4QjlElliQ6DFM2z_5s','1510480862','021InpLU0dDi6U1WELIU0DenLU0InpLp') [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Sbsa4QjlElliQ6DFM2z_5s' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-02T18:01:02+08:00 ] 175.9.180.70 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0013s ]
+
+[ 2017-11-02T18:01:07+08:00 ] 175.9.180.70 //user/wxapp_registercomplex?mallname=wxcba01efc22c3fcc6&openid=oDIAe0Sbsa4QjlElliQ6DFM2z_5s&code=%7B%22errMsg%22%3A%22getUserInfo%3Aok%22%2C%22rawData%22%3A%22%7B%5C%22nickName%5C%22%3A%5C%22%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BD%9E%E5%B0%8F%E7%84%A6%5C%22%2C%5C%22gender%5C%22%3A1%2C%5C%22language%5C%22%3A%5C%22zh_CN%5C%22%2C%5C%22city%5C%22%3A%5C%22Zhumadian%5C%22%2C%5C%22province%5C%22%3A%5C%22Henan%5C%22%2C%5C%22country%5C%22%3A%5C%22China%5C%22%2C%5C%22avatarUrl%5C%22%3A%5C%22https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83er5ibdSJpHHVjwric3WaS7EW1Om08iacNQwcQpz2EJkwiaoJm4dTanUzhh16X5MfbNFiccfgHcwHoYbT9g%2F0%5C%22%7D%22%2C%22userInfo%22%3A%7B%22nickName%22%3A%22%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BD%9E%E5%B0%8F%E7%84%A6%22%2C%22gender%22%3A1%2C%22language%22%3A%22zh_CN%22%2C%22city%22%3A%22Zhumadian%22%2C%22province%22%3A%22Henan%22%2C%22country%22%3A%22China%22%2C%22avatarUrl%22%3A%22https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83er5ibdSJpHHVjwric3WaS7EW1Om08iacNQwcQpz2EJkwiaoJm4dTanUzhh16X5MfbNFiccfgHcwHoYbT9g%2F0%22%7D%2C%22signature%22%3A%22850d4e331338c52e3275d5edfbf69948bcce9ffc%22%2C%22encryptedData%22%3A%22EciKCjdzIPAZrKS07qWBkBfZCwyUfHHgtPuAxRjwiXbWGW%2F4gZdURinUjl227S1OYNy4BWlP%2Fu%2Fq4TFhYh8d1QYfS%2BWMgDl1ha%2F%2B3RF%2F6HEVECJYmgFXvsH4w%2BNBHSi3PGNqmdoTqS0ZGAnNTf%2FUQ3iGTjsjJC1HwE3xItUmCvI6ECKSANKfreuV4f6mWvZsSQlh6A%2BPyspyY7zKl4x6gMuYagirw7EOJZvDE7Xcvdrum9%2FgQqhySGVPRaoIFfzJ4P30WQHB6usgpM9WL6s3%2Bb9Bpq9aHkZud35FE8gE%2FeExlVaV%2FFFh%2FRHZHzUm9QaSpHnvGg0X1SOaMbpb5NZyi2jo5MFaHqMW40uEVkp2dzStv%2F0hH7YKQ3dydPuqyRhw7F7XC9ThMvOQXv4Bf0KBNVq2DP4VTunUzJx%2BqDCKAXcYO47koiCoJWTxyQ8QEBEykDB6RMdwabFViE%2BHYUh6ViY8%2BDfKUEHkWEB4lUMa39U%3D%22%2C%22iv%22%3A%22SAUYIS9fKbAEXc96g7lGiQ%3D%3D%22%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: signature /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 145 行.
+NOTIC: [8] Undefined index: encryptedData /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 146 行.
+NOTIC: [8] Undefined index: iv /home/wwwroot/small/Application/Admin/Controller/UserController.class.php 第 147 行.
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Sbsa4QjlElliQ6DFM2z_5s' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+SQL: INSERT INTO `weapp_shop_wxappuser` (`nickName`,`gender`,`language`,`city`,`province`,`country`,`avatarUrl`,`signature`,`encryptedData`,`iv`,`token`,`token_time`,`shopid`,`create_time`,`openid`) VALUES ('小程序～小焦','1','zh_CN','Zhumadian','Henan','China','https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83er5ibdSJpHHVjwric3WaS7EW1Om08iacNQwcQpz2EJkwiaoJm4dTanUzhh16X5MfbNFiccfgHcwHoYbT9g/0',NULL,NULL,NULL,'5757b018fd4f4265afeb4a2c18ab18fb','1512208867','29','1509616867','oDIAe0Sbsa4QjlElliQ6DFM2z_5s') [ RunTime:0.0036s ]
+
+[ 2017-11-02T18:01:08+08:00 ] 175.9.180.70 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=021X1vpa2o3l3S0Djqsa2ss5pa2X1vpD
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0019s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('AD6sgHyzmJLElOuoz4si3A==','oDIAe0Sbsa4QjlElliQ6DFM2z_5s','1510480868','021X1vpa2o3l3S0Djqsa2ss5pa2X1vpD') [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0Sbsa4QjlElliQ6DFM2z_5s' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-02T18:06:13+08:00 ] 184.105.247.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-11-02T20:25:28+08:00 ] 140.205.225.189 /showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+ERR: 无法加载控制器:Showcase
+
+[ 2017-11-02T20:25:28+08:00 ] 140.205.225.189 /struts2-showcase/integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+ERR: 无法加载控制器:Struts2-showcase
+
+[ 2017-11-02T20:25:28+08:00 ] 140.205.225.189 /integration/saveGangster.action
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+ERR: 无法加载控制器:Integration
+
+[ 2017-11-02T21:44:22+08:00 ] 183.39.231.253 /allthing/api/firstButton
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003550s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T21:44:22+08:00 ] 183.39.231.253 /allthing/api/lunboArticles
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T21:44:23+08:00 ] 183.39.231.253 /allthing/orderapi/getByOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002272s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003169s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T21:44:23+08:00 ] 183.39.231.253 /allthing/pictureapi/getList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004760s ]
+ERR: 无法加载控制器:Allthing
+
+[ 2017-11-02T22:08:24+08:00 ] 183.39.231.253 //config/get_value?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-02T22:08:24+08:00 ] 183.39.231.253 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001492s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0007s ]
+
+[ 2017-11-02T22:08:24+08:00 ] 183.39.231.253 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC  [ RunTime:0.0002s ]
+
+[ 2017-11-02T22:08:24+08:00 ] 183.39.231.253 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0005s ]
+
+[ 2017-11-02T22:08:24+08:00 ] 183.39.231.253 //user/wxapp_login?mallname=wxcba01efc22c3fcc6&code=003AVmv72wF3SL01Lkw728Yfv72AVmvI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_weapp_session` [ RunTime:0.0020s ]
+SQL: INSERT INTO `weapp_weapp_session` (`session_key`,`openid`,`create_time`,`code`) VALUES ('+5zQ4c2FnLgaQmovRtFOzA==','oDIAe0ULleCd5jQeK64-jqn1JE9o','1510495704','003AVmv72wF3SL01Lkw728Yfv72AVmvI') [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `openid` = 'oDIAe0ULleCd5jQeK64-jqn1JE9o' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-02T22:08:26+08:00 ] 183.39.231.253 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001519s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0030s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223706' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+
+[ 2017-11-02T22:08:26+08:00 ] 183.39.231.253 //order/blist?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0013s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223706' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0030s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `wxuid` = '4816' AND `is_del` = 0 AND `uid` = 29 ORDER BY create_time DESC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-02T22:08:29+08:00 ] 183.39.231.253 //order/close?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d&orderId=51096907
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223709' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: UPDATE `weapp_shop_order` SET `update_time`='1509631709',`close_time`='1509631709',`is_del`='1' WHERE `id` = 51096907 AND `wxuid` = '4816' [ RunTime:0.0022s ]
+
+[ 2017-11-02T22:08:29+08:00 ] 183.39.231.253 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0023s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223709' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0119s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+
+[ 2017-11-02T22:08:29+08:00 ] 183.39.231.253 //order/blist?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0018s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223709' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0096s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `wxuid` = '4816' AND `is_del` = 0 AND `uid` = 29 ORDER BY create_time DESC  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-02T22:08:30+08:00 ] 183.39.231.253 //order/close?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d&orderId=51096906
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223710' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: UPDATE `weapp_shop_order` SET `update_time`='1509631710',`close_time`='1509631710',`is_del`='1' WHERE `id` = 51096906 AND `wxuid` = '4816' [ RunTime:0.0020s ]
+
+[ 2017-11-02T22:08:30+08:00 ] 183.39.231.253 //order/blist?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0011s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223710' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0051s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `wxuid` = '4816' AND `is_del` = 0 AND `uid` = 29 ORDER BY create_time DESC  [ RunTime:0.0008s ]
+
+[ 2017-11-02T22:08:30+08:00 ] 183.39.231.253 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0026s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223710' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0030s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+
+[ 2017-11-02T22:08:33+08:00 ] 183.39.231.253 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001494s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223713' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+
+[ 2017-11-02T22:08:33+08:00 ] 183.39.231.253 //order/blist?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d&status=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223713' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0048s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `status` = 3 AND `wxuid` = '4816' AND `is_del` = 0 AND `uid` = 29 ORDER BY create_time DESC  [ RunTime:0.0011s ]
+
+[ 2017-11-02T22:08:35+08:00 ] 183.39.231.253 //order/statistics?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223715' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0031s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `is_del` = 0 AND `uid` = 29 AND `wxuid` = '4816'  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: array /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/small/Application/Admin/Controller/OrderController.class.php 第 97 行.
+
+[ 2017-11-02T22:08:35+08:00 ] 183.39.231.253 //order/blist?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d&status=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001534s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223715' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_order` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_order` WHERE `status` = 3 AND `wxuid` = '4816' AND `is_del` = 0 AND `uid` = 29 ORDER BY create_time DESC  [ RunTime:0.0003s ]
+
+[ 2017-11-02T22:08:36+08:00 ] 183.39.231.253 //shop/goods_detail?mallname=wxcba01efc22c3fcc6&id=42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29 AND `id` = 42 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 32 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 33 行.
+
+[ 2017-11-02T22:08:46+08:00 ] 183.39.231.253 //shop/goods_categoryall?mallname=wxcba01efc22c3fcc6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001727s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_cate` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `weapp_shop_cate` WHERE `is_del` = 0 AND `uid` = 29 ORDER BY `order` DESC  [ RunTime:0.0007s ]
+
+[ 2017-11-02T22:08:46+08:00 ] 183.39.231.253 //banner/blist?mallname=wxcba01efc22c3fcc6&key=mallname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001759s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_vbanner` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `weapp_shop_vbanner` WHERE `is_del` = 0 AND `uid` = 29 LIMIT 7   [ RunTime:0.0013s ]
+
+[ 2017-11-02T22:08:46+08:00 ] 183.39.231.253 //shop/goods_list?mallname=wxcba01efc22c3fcc6&categoryid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29  [ RunTime:0.0009s ]
+
+[ 2017-11-02T22:08:48+08:00 ] 183.39.231.253 //shop/goods_detail?mallname=wxcba01efc22c3fcc6&id=42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29 AND `id` = 42 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 32 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 33 行.
+
+[ 2017-11-02T22:08:53+08:00 ] 183.39.231.253 //shop/goods_detail?mallname=wxcba01efc22c3fcc6&id=42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_goods` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `weapp_shop_goods` WHERE `is_del` = 0 AND `uid` = 29 AND `id` = 42 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 32 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/small/Application/Admin/Controller/ShopController.class.php 第 33 行.
+
+[ 2017-11-02T22:08:53+08:00 ] 183.39.231.253 //user/shipping_address_default?mallname=wxcba01efc22c3fcc6&token=9f625df5b43161a87dbe2d167ae6b28d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `weapp_admin` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_admin` WHERE `mallname` = 'wxcba01efc22c3fcc6' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_statics` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `weapp_statics` WHERE `day` = 1509552000 AND `shopid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `weapp_statics` SET `pv`=pv+1 WHERE `day` = 1509552000 AND `shopid` = 29 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `weapp_config` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `weapp_config` WHERE `uid` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_wxappuser` [ RunTime:0.0012s ]
+NOTIC: [2] Illegal offset type in isset or empty /home/wwwroot/small/ThinkPHP/Library/Think/Model.class.php 第 445 行.
+SQL: UPDATE `weapp_shop_wxappuser` SET `token_time`='1512223733' WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' [ RunTime:0.0031s ]
+SQL: SELECT * FROM `weapp_shop_wxappuser` WHERE `token` = '9f625df5b43161a87dbe2d167ae6b28d' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `weapp_shop_shipaddress` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `weapp_shop_shipaddress` WHERE `is_del` = 0 AND `wxuid` = '4816' ORDER BY `update_time` DESC LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-02T22:23:03+08:00 ] 183.39.231.253 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-11-02T23:44:31+08:00 ] 138.246.253.19 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+

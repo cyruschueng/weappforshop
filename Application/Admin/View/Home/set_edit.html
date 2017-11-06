@@ -1,0 +1,66 @@
+<extend name="Layout/master"/>
+<block name="title">文案编辑-</block>
+<block name="head">
+</block>
+<block name="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class=""><a href="{:U('/home/set')}" target="_self" class="btn btn-primary ">返回</a></div>
+                <div class="ibox-title">
+                    <h5><a href="{:U('/home/set')}"> 文案管理</a> >
+                        <small>文案编辑</small>
+                    </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="post" name="edit" target="_self" action="{:U('/home/set_edit')}" class="form-horizontal">
+                        <input type="hidden" name="id" value="{$config.id}"/>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">对应配置：</label>
+                            <div class="col-sm-10">
+                                <if condition="$config['id']">
+                                    <foreach name="msg_config" item="item" key="is">
+                                        <volist name="item['list']" id="row">
+                                            <if condition="$config['config_name'] eq $key">
+                                                {$item.name}->{$row}
+                                                <input type="hidden" name="category_name" class="form-control" value="{$is}|{$key}" readonly>
+                                            </if>
+                                        </volist>
+                                    </foreach>
+                                <else />
+                                    <select name="category_name" class="form-control">
+                                        <foreach name="msg_config" item="item" key="is">
+                                            <volist name="item['list']" id="row">
+                                                <option value="{$is}|{$key}" <if condition="$config['config_name'] eq $key">selected</if>>{$item.name}->{$row}</option>
+                                            </volist>
+                                        </foreach>
+                                    </select>
+                                    <span class="help-block m-b-none" style="color: #777">*</span>
+                                </if>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">配置内容：</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="config_data" value="{$config.config_data}"
+                                       class="form-control">
+                                <span class="help-block m-b-none" style="color: #777"></span></span> </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary" type="submit">保存内容</button>
+                                <button class="btn btn-white" type="reset">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
