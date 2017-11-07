@@ -1,0 +1,97 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row" >
+        <!-- /.col -->
+        <div class="col-md-9 " >
+
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">顶部广告</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="mailbox-controls">
+                        <div class="btn-group">
+                            <a href="{:url('/admin/banner/reply/add')}" class="btn btn-success text-sm">
+                                新增顶部广告
+                            </a>
+                        </div>
+                        <!-- /.btn-group -->
+                    </div>
+                    <div class="table-responsive" style="overflow-x: visible;">
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            <tr>
+                                <th class="hidden-xs">
+                                    <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                                </th>
+                                <th class=' text-light-blue'>ID</th>
+ 
+                                <th>名称</th>
+                               
+               
+                                <th>图片</th>
+                                <th>链接</th>
+                                 <th>排序</th>
+                                <th class=' text-light-blue'>操作</th>
+                            </tr>
+
+                            {volist name="replylist" id="replylist"}
+                                <tr>
+                                    <td class="hidden-xs">
+                                        <label><input name="checkbox" class="check" type="checkbox"
+                                                      value="{$replylist.id}"></label>
+                                    </td>
+                                    <td>{$replylist.id}</td>
+                               
+                                    <td>{$replylist.title|mb_substr=0,12}</td>
+             
+                                    <td>
+                                        <div class="btn-group" style="margin: 0px;">
+                                            {empty name="replylist.picurl"}
+                                                <img style="height: 50px" src="__PUBLIC__/static/dist/img/noimage.gif">
+                                            {else /}
+                                                <img style="height: 50px"
+                                                src="{$replylist.picurl}">
+                                            {/empty}
+                                        </div>
+                                    </td>
+                                    <td> {empty name="replylist.businessid"}{else /} {$replylist['business']['name']}  {/empty}</td>
+                                    <td>{$replylist.order}</td>
+                                    <td class="table-action" ><a class=' text-light-blue'
+                                            href="{:url('/admin/banner/reply/add',array('id'=>$replylist['id']))}">修改</a><a class=' text-light-blue'
+                                            href="{:url('/admin/banner/reply/del',array('id'=>$replylist['id']))}">删除</a>
+                                    </td>
+                                </tr>
+                            {/volist}
+                            </tbody>
+                        </table>
+                        <div class="box-footer no-padding">
+                            <div class="mailbox-controls">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default  text-sm"
+                                            onclick="batchUrl('{:url(\'/admin/banner/reply/del\')}')">删除
+                                    </button> 
+                                 
+                                </div>
+<!--                                <div class="btn-group">
+                                       <button type="button" class="btn btn-default  text-sm "
+                                            onclick="batchUrl('{:url(\'/admin/banner/reply/del\')}')">下架
+                                    </button>
+                                 
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.mail-box-messages -->
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+     {include file="./application/admin/view/public_help.html" /}
+        
+        
+    </div>
+</section>

@@ -1,0 +1,438 @@
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-dashboard"></i> <span>店铺</span> 
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/index/index')}"><i class="fa "></i>店铺概况</a></li>  
+        <li><a href="{:url('/admin/banner/reply/index')}"><i class="fa "></i>顶部广告</a></li>
+        <li><a href="{:url('/admin/banner/reply/add')}"><i class="fa "></i>添加广告</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+
+<!--<li class="treeview">
+    <a href="#">
+        <i class="glyphicon glyphicon-volume-up"></i> <span>广告</span> 
+    </a>
+    <ul class="treeview-menu">
+
+        <li><a href="{:url('/admin/banner/reply/index')}"><i class="fa "></i>Banner管理</a></li>
+        <li><a href="{:url('/admin/banner/reply/add')}"><i class="fa "></i>添加Banner</a></li>
+      
+    </ul>
+</li>-->
+
+<li class="treeview">
+    <a href="#">
+        <i class="glyphicon glyphicon-barcode"></i> <span>商品</span> 
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/goods/category/index')}"><i class="fa "></i>商品分组</a></li>
+        <li><a href="{:url('/admin/goods/category/add')}"><i class="fa "></i>增加分组</a></li>
+        <li><a href="{:url('/admin/goods/index/index')}"><i class="fa "></i>商品列表</a></li>
+        <li><a href="{:url('/admin/goods/index/add')}"><i class="fa "></i>商品发布</a></li>
+    </ul>
+</li>
+
+
+<li class="treeview">
+    <a href="#">
+        <i class="glyphicon glyphicon-list-alt"></i> <span>订单</span> 
+    </a>
+    <ul class="treeview-menu">
+<!--    0 待付款 1待发货 2已发货 3已完成 4已关闭 5退款中    <li><a href="{:url('/admin/goods/category/index')}"><i class="fa "></i>商品分组</a></li>
+        <li><a href="{:url('/admin/goods/category/add')}"><i class="fa "></i>增加分组</a></li>-->
+        <li><a href="{:url('/admin/order/index/index')}"><i class="fa "></i>全部订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>1))}"><i class="fa "></i>待付款订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>2))}"><i class="fa "></i>待发货订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>3))}"><i class="fa "></i>已发货订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>4))}"><i class="fa "></i>已完成订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>5))}"><i class="fa "></i>已关闭订单</a></li>
+        <li><a href="{:url('/admin/order/index/index',array('status'=>6))}"><i class="fa "></i>退款中订单</a></li>
+    </ul>
+</li>
+
+<li class="treeview">
+    
+      {eq name="user_auth.group_id" value="1"}
+	                     
+    
+    <a href="#">
+        <i class="fa fa-group"></i> <span>客户</span> 
+    </a>
+    <ul class="treeview-menu">
+        
+        
+       
+	                                    
+        <li><a href="{:url('/admin/auth/group/index')}"><i class="fa "></i>管理员用户组</a></li>
+        <li><a href="{:url('/admin/auth/admin/index')}"><i class="fa "></i>管理员列表</a></li>        
+     
+        <li><a href="{:url('/admin/user/index/index')}"><i class="fa "></i>用户列表</a></li>
+        <li><a href="{:url('/admin/user/level/index')}"><i class="fa "></i>会员等级</a></li>
+    </ul>
+    {else/}
+  
+    <a href="#">
+        <i class="fa fa-group"></i> <span>客户</span> 
+    </a>
+    <ul class="treeview-menu">
+        
+       
+     
+        <li><a href="{:url('/admin/myuser/index/index')}"><i class="fa "></i>客户</a></li>
+        <!--<li><a href="{:url('/admin/myuser/level/index')}"><i class="fa "></i>会员等级</a></li>-->
+    </ul>
+    
+       {/eq}
+    
+</li>
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-gears"></i> <span>设置</span> 
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/config/site/index')}"><i class="fa "></i>商城设置</a></li>
+         {eq name="user_auth.group_id" value="1"}
+        <li><a href="{:url('/admin/config/sms/index')}"><i class="fa "></i>短信配置</a></li>
+        <li><a href="{:url('/admin/config/mail/index')}"><i class="fa "></i>邮件配置</a></li>  {/eq}
+    </ul>
+</li>
+<li class="treeview">
+             {eq name="user_auth.group_id" value="1"}
+    <a href="#">
+        <i class="fa fa-edit"></i> <span>内容</span> 
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/article/category/index')}"><i class="fa "></i>文章分类</a></li>
+        <li><a href="{:url('/admin/article/index/index')}"><i class="fa "></i>文章列表</a></li>
+    </ul>{else/}
+    &nbsp
+            {/eq}
+</li>
+
+
+
+<li class="treeview">
+       {eq name="user_auth.group_id" value="1"}
+    <a href="#">
+        <i class="glyphicon glyphicon-comment"></i> <span>公众号</span> 
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/wx/config/index')}"><i class="fa "></i>微信配置</a></li>
+        <li><a href="{:url('/admin/wx/menu/index')}"><i class="fa "></i>微信菜单</a></li>
+        <li><a href="{:url('/admin/wx/reply/index')}"><i class="fa "></i>自定义回复</a></li>
+        <li><a href="{:url('/admin/wx/tplmsg/index')}"><i class="fa "></i>模版消息</a></li>
+        <li><a href="{:url('/admin/wx/kefu/index')}"><i class="fa "></i>多客服设置</a></li>
+        <li><a href="{:url('/admin/wx/print/index')}"><i class="fa "></i>微信打印机</a></li>
+    </ul>{else/}
+    &nbsp
+            {/eq}
+</li>
+
+<li class="treeview">       {eq name="user_auth.group_id" value="1"}
+    <a href="javascript:void(0)">
+        <i class="fa fa-code"></i> <span>模版</span>
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/tpl/shop/index')}"><i class="fa "></i>模版设置</a></li>
+        <li><a href="{:url('/admin/tpl/mail/index')}"><i class="fa "></i>邮件模版</a></li>
+        <li><a href="{:url('/admin/tpl/sms/index')}"><i class="fa "></i>短信模版</a></li>
+    </ul>{else/}
+    &nbsp
+            {/eq}
+</li>
+
+
+
+
+
+<li class="treeview">&nbsp</li>
+
+<li class="treeview ">
+    <a href="#" style='padding: 12px 0px 12px 0px;'>
+      <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="16" height="16">
+  <circle cx="0" cy="0" r="1" fill="none"/>
+  <circle cx="1" cy="0" r="1" fill="none"/>
+  <circle cx="2" cy="0" r="1" fill="none"/>
+  <circle cx="3" cy="0" r="1" fill="none"/>
+  <circle cx="4" cy="0" r="1" fill="rgba(34,34,43,0.054902)"/>
+  <circle cx="5" cy="0" r="1" fill="rgba(13,13,17,0.0313725)"/>
+  <circle cx="6" cy="0" r="1" fill="none"/>
+  <circle cx="7" cy="0" r="1" fill="none"/>
+  <circle cx="8" cy="0" r="1" fill="none"/>
+  <circle cx="9" cy="0" r="1" fill="rgba(81,46,18,0)"/>
+  <circle cx="10" cy="0" r="1" fill="rgba(21,12,3,0.0588235)"/>
+  <circle cx="11" cy="0" r="1" fill="none"/>
+  <circle cx="12" cy="0" r="1" fill="none"/>
+  <circle cx="13" cy="0" r="1" fill="none"/>
+  <circle cx="14" cy="0" r="1" fill="none"/>
+  <circle cx="15" cy="0" r="1" fill="none"/>
+  <circle cx="0" cy="1" r="1" fill="none"/>
+  <circle cx="1" cy="1" r="1" fill="none"/>
+  <circle cx="2" cy="1" r="1" fill="none"/>
+  <circle cx="3" cy="1" r="1" fill="none"/>
+  <circle cx="4" cy="1" r="1" fill="rgba(130,130,173,0.619608)"/>
+  <circle cx="5" cy="1" r="1" fill="rgba(153,152,211,0.886275)"/>
+  <circle cx="6" cy="1" r="1" fill="rgba(102,102,156,0.494118)"/>
+  <circle cx="7" cy="1" r="1" fill="rgba(15,15,25,0.0431373)"/>
+  <circle cx="8" cy="1" r="1" fill="rgba(28,13,7,0.0470588)"/>
+  <circle cx="9" cy="1" r="1" fill="rgba(165,88,40,0.572549)"/>
+  <circle cx="10" cy="1" r="1" fill="rgba(204,115,45,0.913725)"/>
+  <circle cx="11" cy="1" r="1" fill="rgba(69,38,15,0.117647)"/>
+  <circle cx="12" cy="1" r="1" fill="none"/>
+  <circle cx="13" cy="1" r="1" fill="none"/>
+  <circle cx="14" cy="1" r="1" fill="none"/>
+  <circle cx="15" cy="1" r="1" fill="none"/>
+  <circle cx="0" cy="2" r="1" fill="none"/>
+  <circle cx="1" cy="2" r="1" fill="none"/>
+  <circle cx="2" cy="2" r="1" fill="none"/>
+  <circle cx="3" cy="2" r="1" fill="rgba(39,38,63,0)"/>
+  <circle cx="4" cy="2" r="1" fill="rgba(139,139,206,0.886275)"/>
+  <circle cx="5" cy="2" r="1" fill="rgba(169,168,254,1)"/>
+  <circle cx="6" cy="2" r="1" fill="rgba(156,155,253,1)"/>
+  <circle cx="7" cy="2" r="1" fill="rgba(110,108,185,0.803922)"/>
+  <circle cx="8" cy="2" r="1" fill="rgba(195,89,51,0.784314)"/>
+  <circle cx="9" cy="2" r="1" fill="rgba(254,127,67,1)"/>
+  <circle cx="10" cy="2" r="1" fill="rgba(254,133,63,1)"/>
+  <circle cx="11" cy="2" r="1" fill="rgba(162,84,41,0.505882)"/>
+  <circle cx="12" cy="2" r="1" fill="none"/>
+  <circle cx="13" cy="2" r="1" fill="none"/>
+  <circle cx="14" cy="2" r="1" fill="none"/>
+  <circle cx="15" cy="2" r="1" fill="none"/>
+  <circle cx="0" cy="3" r="1" fill="none"/>
+  <circle cx="1" cy="3" r="1" fill="none"/>
+  <circle cx="2" cy="3" r="1" fill="rgba(0,1,0,0.0196078)"/>
+  <circle cx="3" cy="3" r="1" fill="rgba(21,37,13,0.184314)"/>
+  <circle cx="4" cy="3" r="1" fill="rgba(129,129,211,0.988235)"/>
+  <circle cx="5" cy="3" r="1" fill="rgba(150,150,250,1)"/>
+  <circle cx="6" cy="3" r="1" fill="rgba(141,140,242,1)"/>
+  <circle cx="7" cy="3" r="1" fill="rgba(182,149,185,1)"/>
+  <circle cx="8" cy="3" r="1" fill="rgba(254,98,49,1)"/>
+  <circle cx="9" cy="3" r="1" fill="rgba(255,112,64,1)"/>
+  <circle cx="10" cy="3" r="1" fill="rgba(255,118,68,1)"/>
+  <circle cx="11" cy="3" r="1" fill="rgba(198,90,52,0.760784)"/>
+  <circle cx="12" cy="3" r="1" fill="none"/>
+  <circle cx="13" cy="3" r="1" fill="none"/>
+  <circle cx="14" cy="3" r="1" fill="none"/>
+  <circle cx="15" cy="3" r="1" fill="none"/>
+  <circle cx="0" cy="4" r="1" fill="rgba(37,47,36,0.0588235)"/>
+  <circle cx="1" cy="4" r="1" fill="rgba(122,164,112,0.537255)"/>
+  <circle cx="2" cy="4" r="1" fill="rgba(142,211,113,0.92549)"/>
+  <circle cx="3" cy="4" r="1" fill="rgba(148,245,98,0.996078)"/>
+  <circle cx="4" cy="4" r="1" fill="rgba(153,175,207,1)"/>
+  <circle cx="5" cy="4" r="1" fill="rgba(130,129,231,1)"/>
+  <circle cx="6" cy="4" r="1" fill="rgba(125,123,223,1)"/>
+  <circle cx="7" cy="4" r="1" fill="rgba(233,163,136,1)"/>
+  <circle cx="8" cy="4" r="1" fill="rgba(255,75,25,1)"/>
+  <circle cx="9" cy="4" r="1" fill="rgba(254,87,38,1)"/>
+  <circle cx="10" cy="4" r="1" fill="rgba(254,126,82,1)"/>
+  <circle cx="11" cy="4" r="1" fill="rgba(223,159,67,0.952941)"/>
+  <circle cx="12" cy="4" r="1" fill="rgba(197,193,3,0.713725)"/>
+  <circle cx="13" cy="4" r="1" fill="rgba(183,183,37,0.631373)"/>
+  <circle cx="14" cy="4" r="1" fill="rgba(140,141,60,0.384314)"/>
+  <circle cx="15" cy="4" r="1" fill="rgba(43,43,25,0.0431373)"/>
+  <circle cx="0" cy="5" r="1" fill="rgba(40,52,40,0.0823529)"/>
+  <circle cx="1" cy="5" r="1" fill="rgba(161,219,145,0.929412)"/>
+  <circle cx="2" cy="5" r="1" fill="rgba(169,253,134,1)"/>
+  <circle cx="3" cy="5" r="1" fill="rgba(150,249,100,1)"/>
+  <circle cx="4" cy="5" r="1" fill="rgba(182,230,169,1)"/>
+  <circle cx="5" cy="5" r="1" fill="rgba(137,137,223,1)"/>
+  <circle cx="6" cy="5" r="1" fill="rgba(115,107,198,1)"/>
+  <circle cx="7" cy="5" r="1" fill="rgba(242,112,53,1)"/>
+  <circle cx="8" cy="5" r="1" fill="rgba(249,53,3,1)"/>
+  <circle cx="9" cy="5" r="1" fill="rgba(254,165,63,1)"/>
+  <circle cx="10" cy="5" r="1" fill="rgba(254,234,108,1)"/>
+  <circle cx="11" cy="5" r="1" fill="rgba(254,230,8,1)"/>
+  <circle cx="12" cy="5" r="1" fill="rgba(255,249,4,1)"/>
+  <circle cx="13" cy="5" r="1" fill="rgba(254,255,49,1)"/>
+  <circle cx="14" cy="5" r="1" fill="rgba(234,235,96,0.984314)"/>
+  <circle cx="15" cy="5" r="1" fill="rgba(66,66,35,0.156863)"/>
+  <circle cx="0" cy="6" r="1" fill="none"/>
+  <circle cx="1" cy="6" r="1" fill="rgba(96,141,77,0.419608)"/>
+  <circle cx="2" cy="6" r="1" fill="rgba(154,246,110,0.996078)"/>
+  <circle cx="3" cy="6" r="1" fill="rgba(142,242,90,1)"/>
+  <circle cx="4" cy="6" r="1" fill="rgba(131,224,85,1)"/>
+  <circle cx="5" cy="6" r="1" fill="rgba(165,180,219,1)"/>
+  <circle cx="6" cy="6" r="1" fill="rgba(113,109,195,1)"/>
+  <circle cx="7" cy="6" r="1" fill="rgba(224,76,48,1)"/>
+  <circle cx="8" cy="6" r="1" fill="rgba(231,103,0,1)"/>
+  <circle cx="9" cy="6" r="1" fill="rgba(245,215,9,1)"/>
+  <circle cx="10" cy="6" r="1" fill="rgba(252,204,0,1)"/>
+  <circle cx="11" cy="6" r="1" fill="rgba(255,224,0,1)"/>
+  <circle cx="12" cy="6" r="1" fill="rgba(255,243,1,1)"/>
+  <circle cx="13" cy="6" r="1" fill="rgba(254,254,19,1)"/>
+  <circle cx="14" cy="6" r="1" fill="rgba(192,192,40,0.74902)"/>
+  <circle cx="15" cy="6" r="1" fill="rgba(0,0,0,0.00392157)"/>
+  <circle cx="0" cy="7" r="1" fill="none"/>
+  <circle cx="1" cy="7" r="1" fill="rgba(0,0,0,0.00392157)"/>
+  <circle cx="2" cy="7" r="1" fill="rgba(118,137,57,0.698039)"/>
+  <circle cx="3" cy="7" r="1" fill="rgba(163,232,119,1)"/>
+  <circle cx="4" cy="7" r="1" fill="rgba(137,223,95,1)"/>
+  <circle cx="5" cy="7" r="1" fill="rgba(109,199,79,1)"/>
+  <circle cx="6" cy="7" r="1" fill="rgba(104,145,151,1)"/>
+  <circle cx="7" cy="7" r="1" fill="rgba(166,65,67,1)"/>
+  <circle cx="8" cy="7" r="1" fill="rgba(202,112,7,1)"/>
+  <circle cx="9" cy="7" r="1" fill="rgba(158,205,43,1)"/>
+  <circle cx="10" cy="7" r="1" fill="rgba(184,238,102,1)"/>
+  <circle cx="11" cy="7" r="1" fill="rgba(229,242,144,1)"/>
+  <circle cx="12" cy="7" r="1" fill="rgba(248,239,69,1)"/>
+  <circle cx="13" cy="7" r="1" fill="rgba(232,222,1,0.976471)"/>
+  <circle cx="14" cy="7" r="1" fill="rgba(104,103,3,0.219608)"/>
+  <circle cx="15" cy="7" r="1" fill="none"/>
+  <circle cx="0" cy="8" r="1" fill="none"/>
+  <circle cx="1" cy="8" r="1" fill="rgba(89,43,24,0.176471)"/>
+  <circle cx="2" cy="8" r="1" fill="rgba(231,100,56,0.968627)"/>
+  <circle cx="3" cy="8" r="1" fill="rgba(252,114,69,1)"/>
+  <circle cx="4" cy="8" r="1" fill="rgba(239,162,121,1)"/>
+  <circle cx="5" cy="8" r="1" fill="rgba(204,175,91,1)"/>
+  <circle cx="6" cy="8" r="1" fill="rgba(171,126,36,1)"/>
+  <circle cx="7" cy="8" r="1" fill="rgba(206,66,18,1)"/>
+  <circle cx="8" cy="8" r="1" fill="rgba(191,96,60,1)"/>
+  <circle cx="9" cy="8" r="1" fill="rgba(50,165,101,1)"/>
+  <circle cx="10" cy="8" r="1" fill="rgba(88,195,45,1)"/>
+  <circle cx="11" cy="8" r="1" fill="rgba(116,214,66,1)"/>
+  <circle cx="12" cy="8" r="1" fill="rgba(144,234,100,1)"/>
+  <circle cx="13" cy="8" r="1" fill="rgba(122,185,68,0.827451)"/>
+  <circle cx="14" cy="8" r="1" fill="rgba(20,33,14,0.0470588)"/>
+  <circle cx="15" cy="8" r="1" fill="none"/>
+  <circle cx="0" cy="9" r="1" fill="rgba(92,52,20,0)"/>
+  <circle cx="1" cy="9" r="1" fill="rgba(184,96,46,0.670588)"/>
+  <circle cx="2" cy="9" r="1" fill="rgba(255,125,68,1)"/>
+  <circle cx="3" cy="9" r="1" fill="rgba(255,109,61,1)"/>
+  <circle cx="4" cy="9" r="1" fill="rgba(255,83,34,1)"/>
+  <circle cx="5" cy="9" r="1" fill="rgba(253,56,7,1)"/>
+  <circle cx="6" cy="9" r="1" fill="rgba(240,78,29,1)"/>
+  <circle cx="7" cy="9" r="1" fill="rgba(241,141,18,1)"/>
+  <circle cx="8" cy="9" r="1" fill="rgba(179,180,51,1)"/>
+  <circle cx="9" cy="9" r="1" fill="rgba(55,134,208,1)"/>
+  <circle cx="10" cy="9" r="1" fill="rgba(138,213,145,0.996078)"/>
+  <circle cx="11" cy="9" r="1" fill="rgba(122,222,70,1)"/>
+  <circle cx="12" cy="9" r="1" fill="rgba(141,241,89,1)"/>
+  <circle cx="13" cy="9" r="1" fill="rgba(158,252,112,1)"/>
+  <circle cx="14" cy="9" r="1" fill="rgba(114,169,91,0.607843)"/>
+  <circle cx="15" cy="9" r="1" fill="none"/>
+  <circle cx="0" cy="10" r="1" fill="rgba(29,17,5,0.0705882)"/>
+  <circle cx="1" cy="10" r="1" fill="rgba(215,121,48,0.945098)"/>
+  <circle cx="2" cy="10" r="1" fill="rgba(255,132,64,1)"/>
+  <circle cx="3" cy="10" r="1" fill="rgba(255,117,67,1)"/>
+  <circle cx="4" cy="10" r="1" fill="rgba(255,95,45,1)"/>
+  <circle cx="5" cy="10" r="1" fill="rgba(254,149,91,1)"/>
+  <circle cx="6" cy="10" r="1" fill="rgba(254,182,34,1)"/>
+  <circle cx="7" cy="10" r="1" fill="rgba(251,201,0,1)"/>
+  <circle cx="8" cy="10" r="1" fill="rgba(196,218,118,1)"/>
+  <circle cx="9" cy="10" r="1" fill="rgba(0,110,211,1)"/>
+  <circle cx="10" cy="10" r="1" fill="rgba(135,194,233,0.984314)"/>
+  <circle cx="11" cy="10" r="1" fill="rgba(136,229,90,0.972549)"/>
+  <circle cx="12" cy="10" r="1" fill="rgba(148,247,97,1)"/>
+  <circle cx="13" cy="10" r="1" fill="rgba(168,253,131,1)"/>
+  <circle cx="14" cy="10" r="1" fill="rgba(171,234,154,0.980392)"/>
+  <circle cx="15" cy="10" r="1" fill="rgba(55,70,53,0.164706)"/>
+  <circle cx="0" cy="11" r="1" fill="rgba(0,0,0,0.00392157)"/>
+  <circle cx="1" cy="11" r="1" fill="rgba(87,49,19,0.196078)"/>
+  <circle cx="2" cy="11" r="1" fill="rgba(158,81,40,0.458824)"/>
+  <circle cx="3" cy="11" r="1" fill="rgba(174,80,46,0.588235)"/>
+  <circle cx="4" cy="11" r="1" fill="rgba(235,181,24,0.996078)"/>
+  <circle cx="5" cy="11" r="1" fill="rgba(255,233,23,1)"/>
+  <circle cx="6" cy="11" r="1" fill="rgba(255,229,0,1)"/>
+  <circle cx="7" cy="11" r="1" fill="rgba(254,221,10,1)"/>
+  <circle cx="8" cy="11" r="1" fill="rgba(154,203,212,1)"/>
+  <circle cx="9" cy="11" r="1" fill="rgba(0,129,230,1)"/>
+  <circle cx="10" cy="11" r="1" fill="rgba(11,139,236,1)"/>
+  <circle cx="11" cy="11" r="1" fill="rgba(104,193,113,0.952941)"/>
+  <circle cx="12" cy="11" r="1" fill="rgba(127,213,83,0.992157)"/>
+  <circle cx="13" cy="11" r="1" fill="rgba(130,197,101,0.807843)"/>
+  <circle cx="14" cy="11" r="1" fill="rgba(106,144,95,0.411765)"/>
+  <circle cx="15" cy="11" r="1" fill="rgba(33,42,33,0.0352941)"/>
+  <circle cx="0" cy="12" r="1" fill="none"/>
+  <circle cx="1" cy="12" r="1" fill="none"/>
+  <circle cx="2" cy="12" r="1" fill="none"/>
+  <circle cx="3" cy="12" r="1" fill="rgba(0,0,0,0.00784314)"/>
+  <circle cx="4" cy="12" r="1" fill="rgba(212,209,6,0.956863)"/>
+  <circle cx="5" cy="12" r="1" fill="rgba(255,252,10,1)"/>
+  <circle cx="6" cy="12" r="1" fill="rgba(255,247,2,1)"/>
+  <circle cx="7" cy="12" r="1" fill="rgba(246,236,33,1)"/>
+  <circle cx="8" cy="12" r="1" fill="rgba(43,157,233,1)"/>
+  <circle cx="9" cy="12" r="1" fill="rgba(2,148,249,1)"/>
+  <circle cx="10" cy="12" r="1" fill="rgba(10,154,252,1)"/>
+  <circle cx="11" cy="12" r="1" fill="rgba(4,71,118,0.580392)"/>
+  <circle cx="12" cy="12" r="1" fill="rgba(0,1,0,0.0392157)"/>
+  <circle cx="13" cy="12" r="1" fill="none"/>
+  <circle cx="14" cy="12" r="1" fill="none"/>
+  <circle cx="15" cy="12" r="1" fill="none"/>
+  <circle cx="0" cy="13" r="1" fill="none"/>
+  <circle cx="1" cy="13" r="1" fill="none"/>
+  <circle cx="2" cy="13" r="1" fill="none"/>
+  <circle cx="3" cy="13" r="1" fill="none"/>
+  <circle cx="4" cy="13" r="1" fill="rgba(187,188,43,0.694118)"/>
+  <circle cx="5" cy="13" r="1" fill="rgba(254,255,62,1)"/>
+  <circle cx="6" cy="13" r="1" fill="rgba(246,246,31,0.996078)"/>
+  <circle cx="7" cy="13" r="1" fill="rgba(127,149,44,0.682353)"/>
+  <circle cx="8" cy="13" r="1" fill="rgba(4,133,224,0.960784)"/>
+  <circle cx="9" cy="13" r="1" fill="rgba(37,165,254,1)"/>
+  <circle cx="10" cy="13" r="1" fill="rgba(64,173,252,0.996078)"/>
+  <circle cx="11" cy="13" r="1" fill="rgba(23,68,100,0.388235)"/>
+  <circle cx="12" cy="13" r="1" fill="none"/>
+  <circle cx="13" cy="13" r="1" fill="none"/>
+  <circle cx="14" cy="13" r="1" fill="none"/>
+  <circle cx="15" cy="13" r="1" fill="none"/>
+  <circle cx="0" cy="14" r="1" fill="rgba(243,243,243,0)"/>
+  <circle cx="1" cy="14" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="2" cy="14" r="1" fill="rgba(242,242,242,0)"/>
+  <circle cx="3" cy="14" r="1" fill="none"/>
+  <circle cx="4" cy="14" r="1" fill="rgba(115,115,51,0.258824)"/>
+  <circle cx="5" cy="14" r="1" fill="rgba(202,203,91,0.870588)"/>
+  <circle cx="6" cy="14" r="1" fill="rgba(140,140,61,0.427451)"/>
+  <circle cx="7" cy="14" r="1" fill="rgba(178,178,178,0.0862745)"/>
+  <circle cx="8" cy="14" r="1" fill="rgba(73,98,115,0.231373)"/>
+  <circle cx="9" cy="14" r="1" fill="rgba(63,129,178,0.670588)"/>
+  <circle cx="10" cy="14" r="1" fill="rgba(87,145,193,0.862745)"/>
+  <circle cx="11" cy="14" r="1" fill="rgba(19,34,45,0.0901961)"/>
+  <circle cx="12" cy="14" r="1" fill="none"/>
+  <circle cx="13" cy="14" r="1" fill="rgba(243,243,243,0)"/>
+  <circle cx="14" cy="14" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="15" cy="14" r="1" fill="rgba(243,243,243,0)"/>
+  <circle cx="0" cy="15" r="1" fill="rgba(242,242,242,0.00392157)"/>
+  <circle cx="1" cy="15" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="2" cy="15" r="1" fill="rgba(240,240,240,0)"/>
+  <circle cx="3" cy="15" r="1" fill="rgba(242,242,242,0)"/>
+  <circle cx="4" cy="15" r="1" fill="rgba(47,47,47,0.00392157)"/>
+  <circle cx="5" cy="15" r="1" fill="rgba(52,52,52,0.0235294)"/>
+  <circle cx="6" cy="15" r="1" fill="rgba(178,178,178,0)"/>
+  <circle cx="7" cy="15" r="1" fill="rgba(237,237,237,0)"/>
+  <circle cx="8" cy="15" r="1" fill="rgba(237,237,237,0)"/>
+  <circle cx="9" cy="15" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="10" cy="15" r="1" fill="rgba(30,30,30,0.027451)"/>
+  <circle cx="11" cy="15" r="1" fill="rgba(174,174,174,0)"/>
+  <circle cx="12" cy="15" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="13" cy="15" r="1" fill="rgba(239,239,239,0)"/>
+  <circle cx="14" cy="15" r="1" fill="rgba(241,241,241,0)"/>
+  <circle cx="15" cy="15" r="1" fill="rgba(242,242,242,0.00392157)"/>
+</svg>
+<span>营销中心</span>
+    </a>
+    <ul class="treeview-menu ">
+        <li><a  href="{:url('/admin/addons/index')}"><i class="fa"></i>营销中心</a></li>
+        <li><a href="{:url('/admin/addons/shop')}"><i class="fa "></i>营销API</a></li>
+    </ul>
+</li>
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-hand-o-right"></i> <span>帮助</span>
+    </a>
+    <ul class="treeview-menu">
+        <li><a href="{:url('/admin/help/index')}"><i class="fa "></i>使用帮助</a></li>
+    </ul>
+</li>
+
+
+
+

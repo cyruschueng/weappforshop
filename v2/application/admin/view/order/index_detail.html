@@ -1,0 +1,150 @@
+    <!-- Main content -->
+    <div class="invoice col-md-9">
+      <!-- title row -->
+      <div class="row">
+<!--        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> AdminLTE, Inc.
+            <small class="pull-right">Date: 2/10/2014</small>
+          </h2>
+        </div>-->
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+       <strong>    {$order.status}</strong><br>
+          <address>               {empty name="order.who"}           {else /}
+            <img style="height: 40px"
+     
+                                                src="{$order.who.avatarUrl}"><br>
+            昵称：{$order.who.nickName}<br>
+            <!--openid:{$order.who.openid}<br>--> 
+            {/empty}
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+        地址
+          <address>
+                        <strong>{$order.mobile}</strong><br>
+            <strong>{$order.linkman}</strong><br>
+            {$order.code}<br>
+   
+              {$order.address}<br>
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          <!-- <b>支付方式:&nbsp;{$order.paymethod|default='-'}</b><br> -->
+
+          <b>订单编号:</b> {$order.id}<br>
+          <b>快递公司:</b> {$order.shipcompany}<br>
+          <b>快递单号</b> {$order.shipid}
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>商品编号</th>
+              <th>商品</th>
+              <th>图片</th>
+              <th>单价</th>
+              <th>数量</th>
+              <th>小计</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                 {volist name="order.gmapall" id="gmapall"}
+                                 
+                                    
+
+                                  
+            <tr>
+              <td> {$gmapall.id}</td>
+            
+              <td> {$gmapall.name|mb_substr=0,12}</td>
+              <td>  <img style="height: 40px"
+                                                src="{$gmapall.pic}"></td>
+       
+                <td> {$gmapall.minprice}</td>
+                <td> {$gmapall.number}</td>
+                <td> {$gmapall.smallsum}</td>
+            </tr>
+              {/volist}   
+                
+            
+            
+            
+            
+     
+        
+         
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+       
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+          <p class="">下单时间: {$order.create_time}</p>
+
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th style="width:50%">订单总额:</th>
+                <td>¥{$order.sumprice|default=0}</td>
+              </tr>
+      
+              <tr>
+                <th>运费:</th>
+                <td> ¥{$order.yunprice|default=0}</td>
+              </tr>
+              <tr>
+                <th>总额:</th>
+                <td>¥{$order.sumprice|default=0}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+   
+    </div>   {include file="./application/admin/view/public_help.html" /}
+    <!-- /.content -->

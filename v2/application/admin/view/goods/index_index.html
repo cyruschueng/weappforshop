@@ -1,0 +1,155 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-9">
+            <div class="box box-default">
+
+                <div class="row no-print">
+                    <div class="col-xs-12 box-header with-border">
+                        <h4 class="box-title">商品列表</h4> <div class="box-tools">
+                            <form class="form-horizontal" action="{:url('/admin/goods/index/index')}" method="post">
+
+                                <button type="submit" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                                    <i class="fa fa-search"></i> 搜索
+                                </button>
+
+                                <input type="text" name="name" class="form-control pull-right" style="width:200px;" placeholder="商品名">
+                                <select name="category_id" class="form-control pull-right" style="width: 200px;"> 
+                                    <option value="0">请选择分组</option>
+                                    {volist name="category" id="category"}
+                                    <option value="{$category.id}">{$category.name}</option>
+
+                                    {/volist}
+                                </select>
+                            </form></div>
+
+                    </div>
+                </div>
+                <!--                                    <div class="box-header with-border">
+                                    <h3 class="box-title">商品列表</h3>
+                                     /.box-tools 
+                                    <div class="box-tools">
+                                        <form class="form-horizontal" action="{:url('/admin/goods/index/index')}" method="post">
+                                       
+                                    
+                                    
+                                            <div class="input-group input-group-sm" style="width: 250px;">
+                                 
+                                                <input type="text" name="name" class="form-control pull-right" placeholder="用户名">
+                
+                                                <div class="input-group-btn">
+                                                    <button type="submit" class="btn btn-danger text-sm "><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>-->
+
+                <div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:url('/admin/goods/index/add')}" class="btn btn-success text-sm  ">
+                            发布商品
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="hidden-xs">
+                                    <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                                </th>
+                                <th>编号</th>
+                                <th>商品图</th>
+                                <th>商品</th>
+                                <th>分组</th>
+                                <th>价格</th>
+                                <th>优先级</th>
+                                <th>时间</th>
+                                <th>操作</th>
+                            </tr>
+                            {volist name="goodslist" id="goods"}
+                            <tr>
+                                <td class="hidden-xs">
+                                    <label><input name="checkbox" class="check" type="checkbox"
+                                                  value="{$goods.id}"></label>
+                                </td>
+                                <td>
+                                    {$goods.id}
+                                </td>
+                                       <td>
+                                        <div class="btn-group" style="margin: 0px;">
+                                            {empty name="goods.pic"}
+                                                <img style="height: 40px" src="__PUBLIC__/static/dist/img/noimage.gif">
+                                            {else /}
+                                                <img style="height: 40px"
+                                                src="{$goods.pic|explode=',', ###|=###[0]} ">
+                                            {/empty}
+                                        </div>
+                                    </td>
+                                <td>
+                                    {$goods.name|mb_substr=0,12}
+                                </td>
+                                <td>
+                                    {$goods.category.name}
+                                </td>
+                                <td>
+                                    {$goods.minprice}
+                                </td>
+                                <td>
+                                    {$goods.order}
+                                </td>
+
+                                <td>
+                                    {$goods.create_time}
+                                </td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/goods/index/add',array('id'=>$goods['id']))}">编辑</a>
+                                    {eq name="goods.is_del" value="2"}
+                                    <a href="{:url('/admin/goods/index/update',array('id'=>$goods['id'],'is_del'=>0))}">上架</a> 
+                                    {else}
+                                    <a href="{:url('/admin/goods/index/update',array('id'=>$goods['id'],'is_del'=>2))}">下架</a> 
+                                    {/eq}
+                                    <a href="{:url('/admin/goods/index/update',array('id'=>$goods['id'],'is_del'=>1  ))}">删除</a> 
+                                </td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer table-responsive">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success text-sm "
+                                onclick="batchUrl('{:url(\'/admin/goods/index/update\',array(\'is_del\'=>0))}')">
+                            上架
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success text-sm "
+                                onclick="batchUrl('{:url(\'/admin/goods/index/update\',array(\'is_del\'=>2))}')">
+                            下架
+                        </button>
+                    </div>
+                     <div class="btn-group">
+    <button type="button" class="btn btn-success text-sm "
+              onclick="batchUrl('{:url(\'/admin/goods/index/update\',array(\'is_del\'=>1))}')">
+        删除
+    </button>
+</div> 
+                    <div class="btn-group">
+                    </div>
+                    <div class="pull-right">
+                        {$goodslist->render()}
+                    </div>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+             {include file="./application/admin/view/public_help.html" /}
+    </div>
+</section>
+<script type="text/javascript">
+
+</script>

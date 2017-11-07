@@ -1,0 +1,89 @@
+<!-- Main content -->
+<section class="content">
+	<div class="row">
+		<!-- /.col -->
+		<div class="col-md-9">
+			<div class="box box-default">
+				<div class="box-header with-border">
+					<h3 class="box-title">商品分组</h3>
+				</div>
+				<div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:url('/admin/goods/category/add')}" class="btn btn-success text-sm ">
+							新增分组
+						</a>
+                    </div>
+                </div>
+				<div class="box-body table-responsive">
+					<table class="table table-bordered table-hover">
+						<tbody>
+							<tr>
+								<th class="hidden-xs">
+									<label><input onchange="checkAll()" type="checkbox" value=""></label>
+								</th>
+								<!--<th>编号</th>-->
+								<th>名称</th>
+                                                                <th>商品数</th>
+								<th>优先级</th>
+								<th>操作</th>
+							</tr>
+							{volist name="categorylist" id="category"}
+								<tr>
+									<td class="hidden-xs">
+										<label><input name="checkbox" class="check" type="checkbox"
+													  value="{$category.id}"></label>
+									</td>
+<!--									<td>
+										{$category.id}
+									</td>-->
+									<td>
+										{$category.name}
+									</td>
+                                                                        	<td>
+										ddd
+									</td>
+									<td>
+	                                	{$category.order}
+	                                </td>
+							
+									<td class="table-action ">
+										<a href="{:url('/admin/goods/category/add',array('id'=>$category['id']))}">编辑</a>
+										{eq name="category.is_del" value="1"}
+	                                    <a href="{:url('/admin/goods/category/update',array('id'=>$category['id'],'status'=>1))}">开启</a> 
+	                                    {else}
+	                                    <a href="{:url('/admin/goods/category/update',array('id'=>$category['id'],'status'=>0))}">删除</a> 
+	                                    {/eq}
+	                                    <!-- <a href="{:url('/admin/goods/category/del',array('id'=>$category['id']))}">删除</a> -->
+									</td>
+								</tr>
+							
+							{/volist}
+						</tbody>
+					</table>
+				</div>
+				<div class="box-footer table-responsive">
+                	<div class="btn-group">
+                        <button type="button" class="btn btn-success  text-sm"
+                                onclick="batchUrl('{:url(\'/admin/goods/category/update\',array(\'status\'=>1))}')">
+                            删除
+                        </button>
+                    </div>
+               
+                    <!-- <div class="btn-group">
+                        <button type="button" class="btn btn-success text-sm"
+                                onclick="batchUrl('{:url(\'/admin/goods/category/del\')}')">删除
+                        </button>
+                    </div> -->
+                    <div class="pull-right">
+					</div>
+                </div>
+			</div>
+			<!-- /. box -->
+		</div>
+		<!-- /.col -->
+                     {include file="./application/admin/view/public_help.html" /}
+	</div>
+</section>
+<script type="text/javascript">
+	
+</script>

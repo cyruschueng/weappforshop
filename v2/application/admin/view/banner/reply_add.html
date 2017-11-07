@@ -1,0 +1,145 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-9">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增顶部广告</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal layui-form" method="post" action="{:url('/admin/banner/reply/add')}">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$reply.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称</label>
+
+                            <div class="col-sm-6">
+                                <input class="form-control" name="title" placeholder="" value="{$reply.title|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+         
+                    
+
+                        <div class="form-group news" >
+                            <label class="col-sm-2 control-label"><code>*</code>图片</label>
+
+                            <div class="col-sm-10">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-new img-thumbnail">
+                                        {empty name="reply.picurl"}
+                                            <img src="__PUBLIC__/static/dist/img/noimage.gif">
+                                        {else /}
+                                            <img src="{$reply.picurl}">
+                                        {/empty}
+                                        <input class="form-control" name="picurl" id="file_id" placeholder=""
+                                               value="{$reply.picurl|default=''}"
+                                               type="hidden">
+
+                                        <div class="edit_pic_mask">
+                                            <i class="fa fa-plus-circle" onclick="imageUploader(this,false)"></i>
+                                            <i class="fa fa-minus-circle" onclick="removeImage(this,false)"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code>关联商品</label>
+
+                            <div class="col-sm-6">
+                                <select name="businessid" class="form-control">
+                                     <option value="0">请选择关联商品</option>
+                                     {empty name="allshopgoods"}
+                                  <option value="0">您还没发布商品 先去发布商品吧</option>
+                                        {else /}
+                                           {volist name="allshopgoods" id="vo"}
+                                        <option value="{$vo.id}" {eq name="vo.id" value="$reply.businessid|default=''" }selected{/eq}>{$vo.name}</option>
+                                    {/volist}
+                                          {/empty}
+                                </select>
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <label class="col-sm-2 control-label">排序</label>
+
+                            <div class="col-sm-6">
+                                <input class="form-control" name="order" placeholder="" value="{$reply.order|default=0}"
+                                       type="text">
+                            </div>
+                        </div>
+<!--
+                    Date and time range 
+              <div class="form-group">
+                <label>时间段:</label>
+
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="reservationtime">
+                </div>
+                 /.input group 
+              </div>
+               /.form group -->
+
+                
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                         <div class="col-sm-2">  </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-success text-sm" lay-submit lay-filter="addreply">保存</button>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-block btn-default text-sm" onclick="history.go(-1)">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+             {include file="./application/admin/view/public_help.html" /}
+    </div>
+</section>
+
+
+
+<script type="text/javascript">
+//    $(function () {
+//        layui.use('form', function() {
+//            var form = layui.form();
+//            form.render('radio'); //更新全部
+//            form.on('radio(type)', function(data){
+//                if (data.value == "news") {
+//                    $('.news').show();
+//                } else {
+//                    $('.news').hide();
+//                }
+//            });
+//        });
+//    });
+   
+	$(function () {
+		layui.use('form', function() {
+            var form = layui.form();
+            form.render(); //更新全部
+        });
+	});
+        
+        //Date range picker with time picker
+//    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+
+</script>
+
+

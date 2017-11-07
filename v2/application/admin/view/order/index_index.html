@@ -1,0 +1,439 @@
+<!-- Main content -->
+<section class="content">
+
+
+
+    <div class="row">
+        <!-- /.col -->
+
+        <div class="col-md-12">
+
+
+            <div class="box box-default" style="padding-left: 10px; padding-top: 10px;">
+   <!-- search-->
+                <div class="row no-print">
+                    <div class="col-sm-4 invoice-col">
+
+                        <!-- 联系人-->
+                        <div class="form-group">
+                            <label>联系人:</label>
+
+                            <div class="input-group">
+
+
+                                <input type="text" name="search_cantact" value="{$linkman|default=''}" id='search_cantact' class="form-control pull-right" style="width:200px;" placeholder="联系人">
+                            </div>
+                        </div>
+                        <!-- end  订单编号-->
+
+                        <!-- 联系人电话-->
+                        <div class="form-group">
+                            <label>联系人电话:</label>
+
+                            <div class="input-group">
+
+
+                                <input type="text" name="search_mobile" value="{$mobile|default=''}" id='search_mobile' class="form-control pull-right" style="width:200px;" placeholder="联系人电话">
+                            </div>
+                        </div>
+                        <!-- end 联系人电话-->
+
+
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <!-- 下单时间 Date and time range -->
+                        <div class="form-group">
+                            <label>下单时间:</label>
+
+                            <div class="input-group">
+                                <button type="button" class="btn btn-default pull-right" style="width:260px;" id="daterange-btn">
+                    <span>
+                      <i class="fa fa-calendar"></i> 下单时间
+                    </span>
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                            </div>
+                        </div>
+
+                        <!-- end 下单时间 Date and time range -->
+                        <!-- 订单状态-->
+                        <div class="form-group">
+                            <label>订单状态:</label>
+
+                            <div class="input-group">
+                                <select name="search_status" id='search_status' class="form-control pull-right" style="width: 200px;"> 
+                                    <option value="666">全部</option>
+ {volist name="orderstatus" key="key" id="os"}
+                                    <option value="{$key}">{$os}</option>
+
+                                    {/volist}
+                                </select>
+
+                            </div>
+                        </div>
+                        <!-- end 订单状态-->
+
+
+                        <!-- /.form group -->
+
+                    </div>
+
+
+                    <div class="col-sm-4 invoice-col">
+
+                        <!-- 订单编号-->
+                        <div class="form-group">
+                            <label>订单编号:</label>
+
+                            <div class="input-group">
+
+
+                                <input type="text" name="search_sn" id='search_sn' value="{$sn|default=''}" class="form-control pull-right" style="width:200px;" placeholder="订单编号">
+                            </div>
+                        </div>
+                        <!-- end  订单编号-->
+
+                        <!-- 联系人电话-->
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <div class="input-group">
+                                <button class="btn btn-primary pull-right" id="searchall">
+                                    <i class="fa fa-search"></i> 搜索
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end 联系人电话-->
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+   <!-- end search-->
+
+				
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th class="hidden-xs">
+                                    <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                                </th>
+                                <th>编号</th>
+                                <th>订单图</th>
+                                   <th>商品名称</th>
+                                <th>订单状态</th>
+                                <th>订单总额</th>
+                    
+                                  <th>联系人</th>
+                                <th>联系人电话</th>
+              <th>下单时间</th>
+                                <th>操作</th>
+                            </tr>
+                            {volist name="orderlist" id="order"}
+                            <tr>
+                                <td class="hidden-xs">
+                                    <label><input name="checkbox" class="check" type="checkbox"
+                                                  value="{$order.id}"></label>
+                                </td>
+                                <td>
+                                    {$order.id}
+                                </td>
+
+                                <td>
+
+                                    {volist name="order.gmapall" id="gmapall"}
+
+                                    <img style="height: 40px" src="{$gmapall.pic}"> {/volist}
+
+
+                                </td>
+
+
+                                <td>
+
+                                    {volist name="order.gmapall" id="gmapall"} {$gmapall.name|mb_substr=0,12} | {/volist}
+
+
+                                </td>
+
+
+                                     <td> 
+
+
+
+
+
+
+
+                                        {eq name="order.status" value="0"}
+                                     <span class="label label-danger"> {$order.strstatus} </span>
+              
+                                        {/eq}
+
+
+                                                       {eq name="order.status" value="1"}
+                                     <span class="label label-primary"> {$order.strstatus} </span>
+              
+                                        {/eq}
+
+
+                                                               {eq name="order.status" value="2"}
+                                     <span class="label label-warning"> {$order.strstatus} </span>
+              
+                                        {/eq}
+
+
+                                                               {eq name="order.status" value="3"}
+                                     <span class="label label-success"> {$order.strstatus} </span>
+              
+                                        {/eq}
+
+
+
+                                </td>
+
+                                <td>
+                                    {$order.sumprice}
+                                </td>
+
+                                <td>
+                                    {$order.linkman}
+                                </td>
+
+
+                                <td>
+                                    {$order.mobile}
+                                </td>
+
+                                <td>
+                                    {$order.create_time}
+                                </td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/order/index/detail',array('id'=>$order['id']))}">详情</a> {eq name="order.status" value="1"}
+                                    <!-- <a href="{:url('/admin/order/index/update',array('id'=>$order['id'],'status'=>2))}">发货</a>  -->
+
+     <div class="btn-group" style="margin-left: 10px;" data-toggle="modal" data-orderid="{$order.id}" data-target="#myModal">
+                        <a href="#">发货</a>
+                    </div>
+
+                                    {/eq}
+
+                                </td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">发货</h4>
+            </div>
+
+              <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">发货快递：</label>
+            <input type="text" class="form-control" id="shipcompany">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">  运 单 号：</label>
+            <input type="text" class="form-control" id="shipid">
+          </div>
+        </form>
+      </div>
+
+
+
+
+      
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="sub">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="box-footer table-responsive">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success text-sm " onclick="batchUrl('{:url(\'/admin/order/index/update\',array(\'status\'=>2))}')">
+                            批量发货
+                        </button> 批量发货将不填写快递信息
+                    </div>
+
+                    <div class="btn-group">
+                    </div>
+                    <div class="pull-right">
+                        {$page}
+                    </div>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+ 
+    </div>
+</section>
+
+
+<script>
+   $(function () { $('#myModal').modal('hide')});
+</script>
+<script>
+ var orderid  = 0;
+$('#myModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+   orderid = button.data('orderid') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+
+
+  // var modal = $(this)
+  // modal.find('.modal-title').text('New message to ' + recipient)
+  // modal.find('.modal-body input').val(recipient)
+})
+
+   $('#sub').click(function() {
+            var shipcompany = $("#shipcompany").val();
+            var shipid = $("#shipid").val();
+
+
+            var url = "{:url('/admin/order/index/update' )}";
+   url += '?id=' + orderid;
+   url += '&status=' + 2;
+            if (shipcompany) {
+                url += '&shipcompany=' + shipcompany;
+            }else{
+                  alert('请填写发货快递'); return;
+            }
+
+            if (typeof(shipid) == 'undefined') {
+                alert('请填写快递单号');
+                return;
+            } else  if (shipcompany) {
+                url += '&shipid=' + shipid;
+
+$('#myModal').modal('hide');
+ $.pjax({
+                url: url  ,
+                container: '#pjax-container',
+                push: false,
+            });
+
+
+
+
+            }else{
+                   alert('请填写快递单号');
+                return;
+            }
+        });
+</script>
+
+
+
+
+<!-- date-range-picker -->
+<script type="text/javascript">
+    var bt = '';
+    var et = '';
+    $("#searchall").click(function() {
+        var search_cantact = $('#search_cantact').val();
+        var search_mobile = $('#search_mobile').val();
+        var search_status = $('#search_status').val();
+        var search_sn = $('#search_sn').val();
+
+
+        var params = {
+            sn: search_sn,
+            status: search_status,
+            bt: bt,
+            et: et,
+            linkman: search_cantact,
+            mobile: search_mobile
+        };
+        var str = jQuery.param(params);
+        location.href = "{:url('/admin/order/index')}" + '?' + str;
+    });
+    $(document).ready(function() {
+
+
+        if ('{$status|default=666}') {
+            $('select[name="search_status"]').val('{$status|default=666}');
+        }
+        $('#daterange-btn span').html('');
+
+        //时间插件  
+        if ('{$et}' && '{$bt}') {
+            $('#daterange-btn span').html('{$bt}' + ' - ' + '{$et}');
+            bt = '{$bt}';
+            et = '{$et}';
+        }
+
+
+        $('#daterange-btn').daterangepicker({
+            // startDate: moment().startOf('day'),  
+            //endDate: moment(),  
+            //minDate: '01/01/2012',    //最小时间  
+            maxDate: moment(), //最大时间   
+            dateLimit: {
+                days: 30
+            }, //起止时间的最大间隔  
+            showDropdowns: true,
+            showWeekNumbers: false, //是否显示第几周  
+            timePicker: true, //是否显示小时和分钟  
+            timePickerIncrement: 5, //时间的增量，单位为分钟  
+            timePicker12Hour: true, //是否使用12小时制来显示时间  
+            ranges: {
+                //'最近1小时': [moment().subtract('hours',1), moment()],  
+                '今日': [moment().startOf('day'), moment()],
+                '昨日': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
+                '最近7日': [moment().subtract('days', 6), moment()],
+                '最近30日': [moment().subtract('days', 29), moment()]
+            },
+            opens: 'right', //日期选择框的弹出位置  
+            buttonClasses: ['btn btn-default'],
+            applyClass: 'btn-small btn-primary blue',
+            cancelClass: 'btn-small',
+            format: 'YYYY-MM-DD HH:mm', //控件中from和to 显示的日期格式  
+            separator: ' to ',
+            locale: {
+                applyLabel: '确定',
+                cancelLabel: '取消',
+                fromLabel: '起始时间',
+                toLabel: '结束时间',
+                customRangeLabel: '自定义',
+                daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
+                    '七月', '八月', '九月', '十月', '十一月', '十二月'
+                ],
+                firstDay: 1
+            }
+        }, function(start, end) {
+            bt = start.format('YYYY-MM-DD HH:mm');
+            et = end.format('YYYY-MM-DD HH:mm');
+            $('#daterange-btn span').html(start.format('YYYY-MM-DD HH:mm') + ' - ' + end.format('YYYY-MM-DD HH:mm'));
+        });
+
+        //设置日期菜单被选项  --开始--  
+
+    })
+</script>

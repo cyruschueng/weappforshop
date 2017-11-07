@@ -1,0 +1,75 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-9">
+            <!-- general form elements -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">编辑分组</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal layui-form" action="{:url('/admin/goods/category/add')}" method="post" enctype="text/plain">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$category.id|default=0}"
+                               type="hidden">
+
+       
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code>分组名称</label>
+
+                            <div class="col-sm-6">
+                                <input class="form-control" name="name" placeholder="输入商品类别名称" value="{$category.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">优先级</label>
+
+                            <div class="col-sm-6">
+                                <input class="form-control" name="order" placeholder="优先级越大越靠前" value="{$category.order|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+      
+
+<!--                        <div class="form-group">
+                            <label class="control-label col-md-2">状态</label>
+
+                            <div class="col-md-7">
+                                <input type="checkbox" name="status" lay-skin="switch" value="1"
+                                {notempty name="category.status"}checked{/notempty}>
+                            </div>
+                        </div>-->
+                    </div>
+
+                    <div class="box-footer">
+                                 <div class="col-sm-2">    </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-success text-sm ">保存</button>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-block btn-default text-sm " onclick="history.go(-1)">取消
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+             {include file="./application/admin/view/public_help.html" /}
+    </div>
+</section>
+<script type="text/javascript">
+	$(function () {
+		layui.use('form', function() {
+            var form = layui.form();
+            form.render(); //更新全部
+        });
+	});
+</script>

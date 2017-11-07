@@ -1,0 +1,426 @@
+
+<section class="content">
+
+
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="box">
+                <div class="row no-print text-xs">
+                    <div class="col-xs-12 margin ">
+                        <div class="btn" id='myprofile'><img class="profile-user-img img-responsive img-circle" 
+                                              src="{$userlogo|default='/v2/public/static/dist/img/logobig.png'}" alt=""></div>
+                        <div class="shopname" id='myprofileo'>{$usertitle|default='点击编辑商城名称'}</div>   
+                        <button type="button"  class="btn btn-success pull-right text-sm" style="margin-right: 50px; margin-top: 20px;">
+                            <i class="fa fa-list"></i> <a href="{:url('/admin/order/index/index')}">查看订单</a>
+                        </button>
+                        <button type="button" class="btn btn-success pull-right text-sm" style="margin-right:20px; margin-top: 20px;">
+                            <i class="fa fa-tag"></i><a href="{:url('/admin/goods/index/add')}"><i class="fa "></i>发布商品</a> 
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box-footer">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <span class="description-percentage text-green no-margin"  >
+
+                                    <a href="{:url('/admin/myuser/index/index',array('day'=>'today'))}" class="small-box-footer">{$todayUser|default =0} </a>
+                                </span>
+                                <h5 class="description-header" style="margin-top: 8px!important">今日新用户</h5>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <span class="description-percentage text-yellow">
+                                    <a href="{:url('/admin/myuser/index/index',array('day'=>'week'))}" class="small-box-footer">{$weekUser|default = 0}</a>
+
+
+                                </span>
+                                <h5 class="description-header" style="margin-top: 8px!important">本周新用户</h5>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block border-right">
+                                <span class="description-percentage text-green">
+                                    <a href="{:url('/admin/myuser/index/index',array('day'=>'month'))}" class="small-box-footer">{$monthUser|default = 0}</a>
+
+                                </span>
+                                <h5 class="description-header" style="margin-top: 8px!important">本月新用户</h5>
+
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="description-block">
+                                <span class="description-percentage text-red">
+                                    <a href="{:url('/admin/myuser/index/index',array('day'=>''))}" class="small-box-footer">{$totalUser|default = 0}</a>
+                                </span>
+
+                                <h5 class="description-header" style="margin-top: 8px!important">总用户</h5>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.box-footer -->
+            </div>
+
+
+
+
+            <!-- LINE CHART -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">概况图表</h3>
+                </div>
+
+                <div class="box-body">
+                    <div style="width:100%; min-height: 390px" id="containerchart" >
+                    
+                    </div>
+                    <!--                    <div class="chart">
+                                            <canvas id="newUserLineChart" style="height:250px"></canvas>
+                                        </div>-->
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>             {include file="./application/admin/view/public_help.html" /}
+    </div>
+
+
+
+    <!--    <div class="row">
+            <div class="col-md-12">
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <i class="fa fa-bullhorn"></i>
+                        <h3 class="box-title">通知列表</h3>
+                    </div>
+                     /.box-header 
+                    <div class="box-body">
+                        {volist name="newsList.data" id="news"}
+                            <div class="attachment-block clearfix" style="background-color: #fff">
+                                <img class="attachment-img" src="{$url}public/uploads/{$news.file.savepath}{$news.file.savename}" alt="Attachment Image" style="width: 105px;height: 60px">
+                                <div class="attachment-pushed">
+                                    <h3 class="attachment-heading" style="line-height: 60px">
+                                        <a href="{$url}cms/article/{$news.pinyin}" target="_black" style="font-weight: 500;">{$news.title}</a>
+                                    </h3>
+                                     <div class="attachment-text"> 
+                                         {$news.sub}{$news.created_at} 
+                                         <a href="{$url}cms/article/{$news.pinyin}" target="_black">点击查看</a> 
+                                     </div> 
+                                </div>
+                            </div>
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<!--<script src="__PUBLIC__/static/dist/js/exporting.js?v=114"></script>-->
+
+<script type="text/javascript">
+    $(function () {
+ $("#myprofile").click(function(){
+ location.href = "{:url('/admin/config/site/index')}"; 
+});$("#myprofileo").click(function(){
+ location.href = "{:url('/admin/config/site/index')}"; 
+});
+
+
+
+
+         Highcharts.setOptions({
+                lang: {
+                    printChart: "打印图表",
+                    downloadJPEG: "下载JPEG 图片",
+                    downloadPDF: "下载PDF文档",
+                    downloadPNG: "下载PNG 图片",
+                    downloadSVG: "下载SVG 矢量图",
+                    exportButtonTitle: "导出图片",
+                    downloadCSV:"下载CSV格式文件",
+                    downloadXLS:"下载XLS格式文件",
+                    rangeSelectorZoom: '范围',
+                    resetZoom: '重置',
+                    rangeSelectorFrom: '从',
+                    rangeSelectorTo: '到',
+                    months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                    shortMonths: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                    noData: "暂无数据",
+                    weekdays: ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+                },
+                global: {
+                    useUTC: false
+                }
+            });
+
+            $(function () {
+
+                var titleList = ['浏览量', '访客数' ];
+             
+                var seriesOptions = [], seriesCounter = 0,
+                        names = titleList;
+
+                /**
+                 * Create the chart when all data is loaded
+                 * @returns {undefined}
+                 */
+                function createChart() {
+                    $('#containerchart').highcharts('StockChart', {
+                        legend: {
+                                verticalAlign: 'top',
+                            enabled: true
+                        }, lang: {
+                            noData: "暂无数据"
+                        },
+                        noData: {
+                            style: {
+                                fontWeight: 'bold',
+                                fontSize: '40px',
+                                color: '#ccc'
+                            }
+                        },
+                        chart: {
+                            type: 'spline'
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        exporting: {
+                            enabled: false
+                        },
+                        rangeSelector: {
+                            enabled: false,
+                
+                                inputDateFormat: '%Y-%m-%d',
+                                selected: 1
+                            },
+                            yAxis: {
+                  allowDecimals:false,
+                                chart: {
+                                    type: 'spline',
+                                    width: 800
+                                },
+                                plotLines: [{
+                                        value: 0,
+                                        width: 2
+                                    }]
+                            },
+                            plotOptions: {
+                                series: {
+                                    showInNavigator: true
+                                }
+                            },
+                          tooltip: {
+                shared: true,
+                crosshairs: true,
+                // 时间格式化字符
+                // 默认会根据当前的数据点间隔取对应的值
+                // 当前图表中数据点间隔为 1天，所以配置 day 值即可
+                dateTimeLabelFormats: {
+                    day: '%Y-%m-%d'
+                }
+            },
+                            navigator: {
+                                xAxis: {
+                                    labels: {
+                                        format: '{value:%Y-%m-%d}',
+                                        /*
+                                         * 也可以用 formatter 格式化函数，时间格式化说明如下：
+                                         * %Y  年
+                                         * %m  月 
+                                         * %d  日
+                                         * %H  时
+                                         * %M  分
+                                         * %S  秒
+                                         */
+                                        type: 'datetime',
+                                        dateTimeLabelFormats: {
+                                            second: '%Y-%m-%d<br/>%H:%M:%S',
+                                            minute: '%Y-%m-%d<br/>%H:%M',
+                                            hour: '%Y-%m-%d<br/>%H:%M',
+                                            day: '%Y-%m-%d',
+                                            week: '%Y<br/>%m-%d',
+                                            month: '%Y-%m',
+                                            year: '%Y'
+                                        },
+                                        formatter: function () {
+                                            return Highcharts.dateFormat('%Y-%m-%d', this.value);
+                                        }
+
+                                    }
+                                }
+                            },
+                            xAxis: {
+                                type: 'datetime',
+                                dateTimeLabelFormats: {
+                                    second: '%Y-%m-%d<br/>%H:%M:%S',
+                                    minute: '%Y-%m-%d<br/>%H:%M',
+                                    hour: '%Y-%m-%d<br/>%H:%M',
+                                    day: '%Y-%m-%d',
+                                    week: '%Y<br/>%m-%d',
+                                    month: '%Y-%m',
+                                    year: '%Y'
+                                }
+                            },
+                            series: seriesOptions
+                        });
+                    }
+                    $.getJSON('{:url('/admin/index/report_data')}?' + '&callback=?', function (data) {
+                        for (var i = 0; i < names.length; i++)
+                        {
+                            seriesOptions[i] = {
+                                name: names[i],
+                                data: data[i],
+				 pointInterval: 24 * 36e5,
+                                marker: {
+                                    enabled: true,
+                                    radius: 3
+                                }
+                            };
+                            seriesCounter += data[i].length;
+                            console.log(data[i]);
+                        }
+                        console.log(seriesOptions);
+
+                        // As we're loading the data asynchronously, we don't know what order it will arrive. So
+                        // we keep a counter and create the chart when all the data is loaded.
+                        createChart();
+                    });
+                });
+ });
+
+//    $(function () {
+//     
+//
+////    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//        var config = {
+//            type: 'line',
+//            data: {
+//                labels: ["January", "February", "March", "April", "May", "June", "July"],
+//                datasets: [{
+//                        label: "浏览量",
+//                        backgroundColor: 'rgb(255, 99, 132)',
+//                        borderColor: 'rgb(255, 99, 132)',
+//                        data: [
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0
+//                        ],
+//                        fill: false,
+//                    }, {
+//                        label: "访客数",
+//                        fill: false,
+//                        backgroundColor:  'rgb(54, 162, 235)',
+//                        borderColor:  'rgb(54, 162, 235)',
+//                        data: [
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0
+//                        ],
+//                    }, {
+//                        label: "商品浏览量",
+//                        fill: false,
+//                        backgroundColor: 'rgb(153, 102, 255)',
+//                        borderColor: 'rgb(153, 102, 255)',
+//                        data: [
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0
+//                        ],
+//                    }, {
+//                        label: "商品访客数",
+//                        fill: false,
+//                        backgroundColor:'rgb(255, 159, 64)',
+//                        borderColor: 'rgb(255, 159, 64)',
+//                        data: [
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0,
+//                            0
+//                        ],
+//                    }]
+//            },
+//            options: {
+//                responsive: true,
+//                title: {
+//                    display: false,
+//                    text: ''
+//                },
+//                tooltips: {
+//                    mode: 'index',
+//                    intersect: false,
+//                },
+//                hover: {
+//                    mode: 'nearest',
+//                    intersect: true
+//                },
+//                scales: {
+//                    xAxes: [{
+//                            display: true,
+//                            scaleLabel: {
+//                                display: true,
+//                                labelString: 'Month'
+//                            }
+//                        }],
+//                    yAxes: [{
+//                            ticks: {
+//                                stepSize: 1, // minimum will be 0, unless there is a lower value.
+//                                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+//                                // OR //
+//                                beginAtZero: true   // minimum value will be 0.
+//                            },
+//                            display: true,
+//                            scaleLabel: {
+//                                display: true
+//                            }
+//                        }]
+//                }
+//            }
+//        };
+//
+//        var ctx = document.getElementById("canvas").getContext("2d");
+//        window.myLine = new Chart(ctx, config);
+//    });
+
+
+
+
+
+
+</script>

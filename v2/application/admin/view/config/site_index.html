@@ -1,0 +1,154 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-9">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">商城设置</h3>
+                </div>
+                <!-- form start -->
+                <form action="{:url('/admin/config/site/index')}" method="post" class="form-horizontal layui-form">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$config.id|default='0'}"
+                               type="hidden">
+ 
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code>商城名称</label>
+
+                            <div class="col-sm-4">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" 
+                                class="form-control" value="{$config.title|default=''}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"></label>
+
+                            <div class="col-sm-4">
+                                站点名称将显示在微信商城的标题栏 
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code>小程序appid</label>
+
+                            <div class="col-sm-4">
+                                <input class="form-control" name="appid" placeholder="" value="{$config.appid|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><code>*</code>小程序secret</label>
+
+                            <div class="col-sm-4">
+                                <input class="form-control" name="secret" placeholder="" value="{$config.secret|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+
+
+           
+    
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"> 商户号mchid</label>
+
+                            <div class="col-sm-4">
+                                <input class="form-control" name="mchid" placeholder="" value="{$config.mchid|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"> 商户支付密钥</label>
+
+                            <div class="col-sm-4">
+                                <input class="form-control" name="key" placeholder="" value="{$config.key|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">商城logo</label>
+
+                            <div class="col-sm-10">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-new img-thumbnail">
+                                        {empty name="config.logo_id"}
+                                            <img src="__PUBLIC__/static/dist/img/noimage.gif">
+                                        {else /}
+                                            <img src="{$config.logo_id}">
+                                        {/empty}
+                                        <input class="form-control" name="logo_id" id="file_id" placeholder="" value="{$config.logo_id|default=''}" type="hidden">
+                                        <div class="edit_pic_mask">
+                                            <i class="fa fa-plus-circle" onclick="imageUploader(this,false)"></i>
+                                            <i class="fa fa-minus-circle" onclick="removeImage(this,false)"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">站点描述</label>
+
+                            <div class="col-sm-6">
+                                <textarea class="form-control" name="description" placeholder="" rows="3">{$config.description|default=''}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">版权</label>
+
+                            <div class="col-sm-6">
+                            	<input class="form-control" name="copyright" placeholder="" value="{$config.copyright|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">统计代码</label>
+
+                            <div class="col-sm-6">
+                                <textarea class="form-control" name="tongji_code" placeholder="" rows="3">{$config.tongji_code|default=''}</textarea>
+                            </div>
+                        </div>-->
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer"> <div class="col-sm-2">  </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-block btn-success text-sm " lay-submit lay-filter="shopSet">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+<script>
+    layui.use('form', function() {
+        var form = layui.form();
+        form.render(); //更新全部
+        //监听提交
+        // form.on('submit(shopSet)', function(data) {
+            // console.log(data.field);
+            // layer.msg(JSON.stringify(data.field));
+            // return false;
+        // });
+    });
+</script>

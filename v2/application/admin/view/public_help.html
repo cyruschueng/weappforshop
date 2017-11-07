@@ -1,0 +1,65 @@
+        
+
+             <!--help   template-->
+<div class="col-md-3" > 
+                <!--2-->
+          <div class="box box-solid">
+            <div class="box-header with-border">
+            
+              <h4 class=" text-sm"> <i class="fa fa-question-circle"></i> 帮助和服务</h4>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                  
+                   {volist name="articlelist" id="item"}
+    
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                <div class="panel box box-default">         <a data-toggle="collapse" data-parent="#accordion" href="#collapse{$item.id}" >
+                  <div class="box-header with-border">
+                    <h4 class=" text-light-blue text-sm">
+             
+                      {$item.title}
+                   
+                    </h4>
+                  </div>   </a>
+                  <div id="collapse{$item.id}" class="panel-collapse collapse in">
+                    <div class="box-body text-sm">
+  {$item.content}
+                    </div>
+                  </div>
+                </div>
+                
+                  {/volist}
+                
+<!--                <div class="panel box box-default">
+                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <div class="box-header with-border">
+                    <h4 class="text-sm">
+                     
+                        Collapsible Group Danger
+                 
+                    </h4>
+                  </div>     </a>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="box-body">
+                  信最核心的价值，就是连接——提供一对一、一对多和多对多的连接方式，从而实现人与人、人与智能终端、人与社交化娱乐、人与硬件设备的连接，同时连接服务、资讯、商业。
+
+​ 微信团队一直致力于将微信打造成一个强大的、全方位的服务工具。在此基础上，我们推出了微信小程序这个产品，提供给微信小程序的开发者在微信内搭建和实现特定服务、功能的平台。通过全面开放的能力，我们将更多连接的可能给予企业和服务提供者，并为微信小程序提供基础的接入能力、运营环境和规则体系，进而帮助更多的企业和服务提供者建立自己的品牌，将商业机会带给整个微信产业链。
+                    </div>
+                  </div>
+                </div>-->
+                
+                
+                
+                
+      
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+               <!--col 2-->
+            </div>
+                          <!--end  help   template-->
